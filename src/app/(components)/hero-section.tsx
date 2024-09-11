@@ -3,7 +3,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 
-export function HeroSection() {
+export function HeroSection({ setCurrentPage }) {
   return (
     <section
       className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white"
@@ -23,8 +23,9 @@ export function HeroSection() {
         <Button
           size="lg"
           className="bg-white text-purple-600 hover:bg-gray-100"
+          onClick={() => setCurrentPage("eligibility")}
         >
-          Get Started Today
+          Get Started
         </Button>
       </div>
     </section>

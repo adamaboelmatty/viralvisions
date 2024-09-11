@@ -8,21 +8,23 @@ import { FeaturesSection } from "./(components)/features-section";
 import { HowItWorks } from "./(components)/how-it-works";
 import { FAQSection } from "./(components)/faq-section";
 
-export default function Home() {
+export default function Home({ setCurrentPage }) {
   return (
     <div className="space-y-16 py-16">
-      <HeroSection />
+      <HeroSection setCurrentPage={setCurrentPage} />
       <SocialProofSection />
       <CTASection
         title="Join Now for Exclusive Benefits"
         description="Get access to Stream Keys, Ban Protection, and more!"
+        setCurrentPage={setCurrentPage}
       />
 
       <FeaturesSection />
-      <HowItWorks />
+      <HowItWorks setCurrentPage={setCurrentPage} />
       <CTASection
         title="Unlock the Full Potential of Your TikTok Live Streams"
         description="Take your TikTok Live presence to new heights with ViralVisions"
+        setCurrentPage={setCurrentPage}
       />
 
       <FAQSection />

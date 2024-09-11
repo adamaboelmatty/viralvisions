@@ -15,8 +15,12 @@ export default function Layout() {
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
+
       <main className="flex-grow">
-        {currentPage === "home" && <Home />}
+        {currentPage === "home" && (
+          <Home setCurrentPage={setCurrentPage} />
+        )}
+
         {currentPage === "eligibility" && <EligibilityCheck />}
         {/* Add other pages here as needed */}
       </main>

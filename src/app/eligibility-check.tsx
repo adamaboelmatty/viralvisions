@@ -12,11 +12,19 @@ export default function EligibilityCheck() {
   const [email, setEmail] = useState("");
   const [followers, setFollowers] = useState("");
   const [tiktokUsername, setTiktokUsername] = useState("");
+  const [agencyCode, setAgencyCode] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted", { email, followers, tiktokUsername });
+    // Send email with form data
+    const subject = "New Eligibility Check Submission";
+    const body = `
+Email: ${email}
+Followers: ${followers}
+TikTok Username: ${tiktokUsername}
+Agency Code: ${agencyCode}
+`;
+    window.location.href = `mailto:adamaboelmatty1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -40,7 +48,10 @@ export default function EligibilityCheck() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Label htmlFor="email" className="text-gray-700">
-                  Email
+                  Email{" "}
+                  <span className="text-red-500">
+                    *
+                  </span>
                 </Label>
                 <Input
                   name="email"
@@ -58,11 +69,15 @@ export default function EligibilityCheck() {
                   htmlFor="followers"
                   className="text-gray-700"
                 >
-                  How Many Followers Do You Have Currently?
+                  How Many Followers Do You Have Currently?{" "}
+                  <span className="text-red-500">
+                    *
+                  </span>
                 </Label>
                 <RadioGroup
                   onValueChange={setFollowers}
                   className="flex flex-col space-y-1"
+                  required
                 >
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem
@@ -111,7 +126,10 @@ export default function EligibilityCheck() {
                   htmlFor="tiktok-username"
                   className="text-gray-700"
                 >
-                  TikTok Username
+                  TikTok Username{" "}
+                  <span className="text-red-500">
+                    *
+                  </span>
                 </Label>
                 <Input
                   name="tiktok-username"
@@ -119,6 +137,26 @@ export default function EligibilityCheck() {
                   required
                   value={tiktokUsername}
                   onChange={(e) => setTiktokUsername(e.target.value)}
+                  className="border-gray-300 focus:border-purple-500 focus:ring-purple-500"
+                />
+              </div>
+
+              <div>
+                <Label
+                  htmlFor="agency-code"
+                  className="text-gray-700"
+                >
+                  Agency Code{" "}
+                  <span className="text-red-500">
+                    *
+                  </span>
+                </Label>
+                <Input
+                  name="agency-code"
+                  type="text"
+                  required
+                  value={agencyCode}
+                  onChange={(e) => setAgencyCode(e.target.value)}
                   className="border-gray-300 focus:border-purple-500 focus:ring-purple-500"
                 />
               </div>
@@ -132,6 +170,12 @@ export default function EligibilityCheck() {
                 </Button>
               </div>
             </form>
+            <p className="mt-4 text-sm text-gray-500">
+              <span className="text-red-500">
+                *
+              </span>{" "}
+              Required fields
+            </p>
           </CardContent>
         </Card>
       </div>
