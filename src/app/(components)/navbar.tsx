@@ -1,10 +1,17 @@
-'use client';
-
 import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-export function Navbar({ currentPage, setCurrentPage }) {
+interface NavbarProps {
+  currentPage: string;
+  setCurrentPage: (page: string) => void;
+}
+
+export function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
+  const pathname = usePathname();
+
   const scrollToTestimonials = () => {
     const testimonialsSection = document.getElementById("testimonials");
     if (testimonialsSection) {
