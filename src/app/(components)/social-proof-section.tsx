@@ -23,7 +23,7 @@ export function SocialProofSection() {
       name: "Mike Chen",
       handle: "@mikechen",
       content:
-        "I've seen a 500% increase in engagement since working with ViralVisions. Highly recommended!",
+        "I&apos;ve seen a 500% increase in engagement since working with ViralVisions. Highly recommended!",
       avatar: "https://i.pravatar.cc/150?img=3",
     },
   ];
@@ -41,7 +41,7 @@ export function SocialProofSection() {
               className="bg-white p-6 rounded-lg shadow-md"
             >
               <p className="text-gray-600 mb-4">
-                "{testimonial.content}"
+                &quot;{testimonial.content}&quot;
               </p>
               <div className="flex items-center">
                 <Avatar className="h-10 w-10 mr-3">
@@ -49,7 +49,6 @@ export function SocialProofSection() {
                     src={testimonial.avatar}
                     alt={testimonial.name}
                   />
-
                   <AvatarFallback>
                     {testimonial.name[0]}
                   </AvatarFallback>
