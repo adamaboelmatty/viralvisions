@@ -22,7 +22,7 @@ export function Navbar({ currentPage, setCurrentPage }) {
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Image
-              src="/path-to-your-logo.png"
+              src="/viralvisions-logo.png"
               alt="ViralVisions Logo"
               width={40}
               height={40}
