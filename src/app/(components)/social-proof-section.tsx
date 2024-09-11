@@ -9,21 +9,21 @@ export function SocialProofSection() {
       name: "Alex Johnson",
       handle: "@alexjohnson",
       content:
-        'ViralVisions helped me grow my TikTok following from 1K to 100K in just 3 months!',
+        "ViralVisions helped me grow my TikTok following from 1K to 100K in just 3 months!",
       avatar: "https://i.pravatar.cc/150?img=1",
     },
     {
       name: "Sarah Lee",
       handle: "@sarahlee",
       content:
-        'The strategies provided by ViralVisions have been game-changing for my live streams.',
+        "The strategies provided by ViralVisions have been game-changing for my live streams.",
       avatar: "https://i.pravatar.cc/150?img=2",
     },
     {
       name: "Mike Chen",
       handle: "@mikechen",
       content:
-        'I\'ve seen a 500% increase in engagement since working with ViralVisions. Highly recommended!',
+        "I've seen a 500% increase in engagement since working with ViralVisions. Highly recommended!",
       avatar: "https://i.pravatar.cc/150?img=3",
     },
   ];
@@ -41,7 +41,7 @@ export function SocialProofSection() {
               className="bg-white p-6 rounded-lg shadow-md"
             >
               <p className="text-gray-600 mb-4">
-                '{testimonial.content}'
+                &ldquo;{testimonial.content}&rdquo;
               </p>
               <div className="flex items-center">
                 <Avatar className="h-10 w-10 mr-3">
