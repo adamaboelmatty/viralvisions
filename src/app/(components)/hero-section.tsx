@@ -3,7 +3,11 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 
-export function HeroSection({ setCurrentPage }) {
+interface HeroSectionProps {
+  setCurrentPage: (page: string) => void;
+}
+
+export function HeroSection({ setCurrentPage }: HeroSectionProps) {
   return (
     <section
       className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white"
