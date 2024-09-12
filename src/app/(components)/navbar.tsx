@@ -4,7 +4,12 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-export function Navbar({ currentPage, setCurrentPage }) {
+interface NavbarProps {
+  currentPage: string;
+  setCurrentPage: (page: string) => void;
+}
+
+export function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
   const scrollToTestimonials = () => {
     const testimonialsSection = document.getElementById("testimonials");
     if (testimonialsSection) {
@@ -22,15 +27,12 @@ export function Navbar({ currentPage, setCurrentPage }) {
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Image
-              src="/viralvisions-logo.png"
+              src="/logo.png"
               alt="ViralVisions Logo"
               width={40}
               height={40}
             />
-
-            <span
-              className="ml-2 text-xl font-bold text-purple-600"
-            >
+            <span className="ml-2 text-xl font-bold text-purple-600">
               ViralVisions
             </span>
           </div>
