@@ -22,7 +22,7 @@ export function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <Image
-                src="/path-to-your-logo.png"
+                src="/logo.png"
                 alt="ViralVisions Logo"
                 width={40}
                 height={40}
