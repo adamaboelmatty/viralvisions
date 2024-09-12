@@ -1,30 +1,26 @@
 'use client';
 
 import React from "react";
-import { Navbar } from "./(components)/navbar";
-import { Footer } from "./(components)/footer";
 import Home from "./home";
 import EligibilityCheck from "./eligibility-check";
 
-export default function Layout() {
-  const [currentPage, setCurrentPage] = React.useState("home");
+interface PageProps {
+  setCurrentPage: (page: string) => void;
+}
+
+export default function Page({ setCurrentPage }: PageProps) {
+  const [currentPage, setLocalCurrentPage] = React.useState("home");
+
+  React.useEffect(() => {
+    setCurrentPage(currentPage);
+  }, [currentPage, setCurrentPage]);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-      />
-
-      <main className="flex-grow">
-        {currentPage === "home" && (
-          <Home setCurrentPage={setCurrentPage} />
-        )}
-
-        {currentPage === "eligibility" && <EligibilityCheck />}
-        {/* Add other pages here as needed */}
-      </main>
-      <Footer />
-    </div>
+    <>
+      {currentPage === "home" && (
+        <Home setCurrentPage={setLocalCurrentPage} />
+      )}
+      {currentPage === "eligibility" && <EligibilityCheck />}
+    </>
   );
 }
