@@ -3,7 +3,11 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 
-export function HowItWorks({ setCurrentPage }) {
+interface HowItWorksProps {
+  setCurrentPage: (page: string) => void;
+}
+
+export function HowItWorks({ setCurrentPage }: HowItWorksProps) {
   const steps = [
     {
       number: "01",
