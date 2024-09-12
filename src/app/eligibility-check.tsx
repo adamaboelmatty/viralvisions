@@ -22,10 +22,8 @@ export default function EligibilityCheck() {
             <iframe 
               src="https://docs.google.com/forms/d/e/1FAIpQLSd1Jk9AzcOTDuRTrM2huVTa1tpkWu3Gv036ip3GxUqK-ppnrg/viewform?embedded=true" 
               width="100%" 
-              height="800" 
-              frameBorder="0" 
-              marginHeight="0" 
-              marginWidth="0"
+              height={800}
+              style={{ border: "none" }}
             >
               Loading…
             </iframe>
