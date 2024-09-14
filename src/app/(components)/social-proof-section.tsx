@@ -25,7 +25,7 @@ export function SocialProofSection() {
               </div>
               <div>
                 <blockquote className="text-lg text-gray-700 mb-6 italic">
-                  "I transformed my TikTok live streaming hobby into a lucrative career. In my first month of livestreaming, I went from earning nothing to making <span className="font-bold text-purple-600">$4,500, with an average of $50 per hour</span>. This unexpected success became the foundation of ViralVisions."
+                  "I transformed my TikTok live streaming hobby into a lucrative career. In my first month of livestreaming, I went from earning nothing to making <span className="font-bold text-purple-600">$6,000, with an average of $60 per hour</span>. This unexpected success became the foundation of ViralVisions."
                 </blockquote>
                 <p className="text-gray-700 mb-6">
                   At ViralVisions, we're not just sharing a success story – we're offering you a blueprint for your own TikTok triumph. Our mission is to equip aspiring live streamers with the strategies, tools, and support needed to unlock their full potential on the platform. What's truly remarkable is that these results were achieved with less than 3,500 followers, proving that a large following isn't necessary to start earning. Imagine what you could achieve with our proven methods and dedicated guidance.
@@ -36,11 +36,11 @@ export function SocialProofSection() {
                 </div>
                 <div className="flex justify-between text-center">
                   <div>
-                    <p className="font-bold text-purple-800 text-2xl">$4,500+</p>
+                    <p className="font-bold text-purple-800 text-2xl">$6,000+</p>
                     <p className="text-gray-600">First Month</p>
                   </div>
                   <div>
-                    <p className="font-bold text-purple-800 text-2xl">$50/hour</p>
+                    <p className="font-bold text-purple-800 text-2xl">$60/hour</p>
                     <p className="text-gray-600">Average Earnings</p>
                   </div>
                   <div>
