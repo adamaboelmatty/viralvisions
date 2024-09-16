@@ -46,14 +46,9 @@ export default function LiveCreators() {
     },
     {
       question:
-        "Can I leave the NBCN anytime I want or am I stuck in a contract?",
+        "Can I leave the ViralVisoins anytime I want or am I stuck in a contract?",
       answer:
         "This partnership is completely voluntary. We offer a 14-day trial period with the option to remove yourself from our roster. After the 14 days, either party can remove themselves from the partnership.",
-    },
-    {
-      question: "What if I don't live in Los Angeles?",
-      answer:
-        "We have remote programs too! You can livestream from home if that's better for you. For our on-site creators, we can transition you to a home setup within 2 weeks of joining and mastering livestreaming!",
     },
     {
       question:
@@ -62,7 +57,7 @@ export default function LiveCreators() {
         "Gifts through personal branding and community building! Gifts received on TikTok Live equate to money that you can cash out every week. For example: 100 coins (or diamonds) = $1 USD, creators make 50% of every gift sent, so for every $1 USD you'd make 50 cents.",
     },
     {
-      question: "How can NBCN help me monetize?",
+      question: "How can ViralVisions help me monetize?",
       answer:
         "We will be your strategy team through every step of the way. We have proven methods on traffic, monetization, and community building, all of which to be covered throughout our 4 week program. Some examples of this are activate your viewers to light up gift galleries, assisting with gift goals and live battles to win big!",
     },
@@ -80,8 +75,7 @@ export default function LiveCreators() {
           <p
             className="text-xl text-center mb-12 max-w-3xl mx-auto"
           >
-            As TikTok Live's official partner, NBCN helps creators livestream on
-            their TikTok account in our LA content studio (NBCN LIVE center),
+            As TikTok Live's official partner, ViralVisions helps creators
             grow a following, and monetize their talent with our FREE creator
             partnership.
           </p>
