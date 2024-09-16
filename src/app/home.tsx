@@ -19,14 +19,14 @@ export default function Home({ setCurrentPage }: HomeProps) {
       <SocialProofSection />
       <CTASection
         title="Join Now for Exclusive Benefits"
-        description="Get access to Stream Keys, Ban Protection, and more!"
+        description="Gain instant access to essential resources like Stream Keys, Ban Protection, and more."
         setCurrentPage={setCurrentPage}
       />
       <FeaturesSection />
       <HowItWorks setCurrentPage={setCurrentPage} />
       <CTASection
         title="Unlock the Full Potential of Your TikTok Live Streams"
-        description="Take your TikTok Live presence to new heights with ViralVisions"
+        description="Take your TikTok Live earnings to new heights with ViralVisions"
         setCurrentPage={setCurrentPage}
       />
       <FAQSection />
