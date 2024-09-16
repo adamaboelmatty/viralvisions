@@ -135,55 +135,15 @@ export default function LiveCreatorAgentPage() {
         </Card>
       </div>
 
-      <Tabs defaultValue="referral" className="w-full">
+      <Tabs defaultValue="managing" className="w-full">
         <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="referral">
-            Referral Agent Calculator
-          </TabsTrigger>
           <TabsTrigger value="managing">
             Managing Agent Calculator
           </TabsTrigger>
+          <TabsTrigger value="referral">
+            Referral Agent Calculator
+          </TabsTrigger>
         </TabsList>
-        <TabsContent value="referral">
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                Referral Agent Earnings Calculator
-              </CardTitle>
-              <CardDescription>
-                Estimate your potential earnings as a Referral Agent
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium mb-1">
-                    Number of influencers you can bring on board per week:
-                  </label>
-                  <Input
-                    type="number"
-                    value={referralCreators}
-                    onChange={(e) =>
-                      setReferralCreators(Number(e.target.value))
-                    }
-                    className="w-full"
-                  />
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Average: 40 talents per week
-                </p>
-                <div className="border-t pt-4">
-                  <h3 className="text-lg font-semibold">
-                    Potential Monthly Earnings
-                  </h3>
-                  <p className="text-4xl font-bold text-purple-600">
-                    ${calculateReferralEarnings(referralCreators).toFixed(2)}
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
         <TabsContent value="managing">
           <Card>
             <CardHeader>
@@ -262,6 +222,46 @@ export default function LiveCreatorAgentPage() {
                       managingTotal,
                       tiktokKnowledge,
                     ).toFixed(2)}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+        <TabsContent value="referral">
+          <Card>
+            <CardHeader>
+              <CardTitle>
+                Referral Agent Earnings Calculator
+              </CardTitle>
+              <CardDescription>
+                Estimate your potential earnings as a Referral Agent
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium mb-1">
+                    Number of influencers you can bring on board per week:
+                  </label>
+                  <Input
+                    type="number"
+                    value={referralCreators}
+                    onChange={(e) =>
+                      setReferralCreators(Number(e.target.value))
+                    }
+                    className="w-full"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Average: 40 talents per week
+                </p>
+                <div className="border-t pt-4">
+                  <h3 className="text-lg font-semibold">
+                    Potential Monthly Earnings
+                  </h3>
+                  <p className="text-4xl font-bold text-purple-600">
+                    ${calculateReferralEarnings(referralCreators).toFixed(2)}
                   </p>
                 </div>
               </div>
