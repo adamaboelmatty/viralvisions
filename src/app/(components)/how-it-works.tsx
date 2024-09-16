@@ -3,7 +3,11 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 
-export function HowItWorks({ setCurrentPage }) {
+interface HowItWorksProps {
+  setCurrentPage: (page: string) => void;
+}
+
+export function HowItWorks({ setCurrentPage }: HowItWorksProps) {
   const steps = [
     {
       number: "01",
@@ -26,9 +30,7 @@ export function HowItWorks({ setCurrentPage }) {
   ];
 
   return (
-    <section
-      className="py-16 bg-gradient-to-br from-purple-100 to-indigo-100"
-    >
+    <section className="py-16 bg-gradient-to-br from-purple-100 to-indigo-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-12">
           How it Works
@@ -39,9 +41,7 @@ export function HowItWorks({ setCurrentPage }) {
               key={index}
               className="bg-white p-6 rounded-lg shadow-md"
             >
-              <div
-                className="text-3xl font-bold text-purple-600 mb-4"
-              >
+              <div className="text-3xl font-bold text-purple-600 mb-4">
                 {step.number}
               </div>
               <h3 className="text-xl font-semibold mb-2">
