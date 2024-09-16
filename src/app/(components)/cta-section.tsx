@@ -16,7 +16,7 @@ export function CTASection({ title, description, setCurrentPage }: CTASectionPro
         <h2 className="text-3xl sm:text-4xl font-bold mb-6">
           {title}
         </h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
+        <p className="text-xl mb-8 max-w-3xl mx-auto">
           {description}
         </p>
         <Button
