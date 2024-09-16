@@ -5,6 +5,8 @@ import { Navbar } from "./(components)/navbar";
 import { Footer } from "./(components)/footer";
 import Home from "./home";
 import EligibilityCheck from "./eligibility-check";
+import LiveCreatorAgents from "./live-creator-agents";
+import LiveCreators from "./live-creators";
 
 export default function Layout() {
   const [currentPage, setCurrentPage] = React.useState("home");
@@ -22,7 +24,11 @@ export default function Layout() {
         )}
 
         {currentPage === "eligibility" && <EligibilityCheck />}
-        {/* Add other pages here as needed */}
+        {currentPage === "live-creator-agents" && (
+          <LiveCreatorAgents />
+        )}
+
+        {currentPage === "live-creators" && <LiveCreators />}
       </main>
       <Footer />
     </div>

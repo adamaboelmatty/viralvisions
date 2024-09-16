@@ -4,10 +4,10 @@ import React from "react";
 import Image from "next/image";
 
 export function Footer() {
-  const scrollToTestimonials = () => {
-    const testimonialsSection = document.getElementById("testimonials");
-    if (testimonialsSection) {
-      testimonialsSection.scrollIntoView({ behavior: "smooth" });
+  const scrollToSuccessStory = () => {
+    const successStorySection = document.getElementById("testimonials");
+    if (successStorySection) {
+      successStorySection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -55,11 +55,11 @@ export function Footer() {
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToTestimonials();
+                    scrollToSuccessStory();
                   }}
                   className="text-gray-400 hover:text-white cursor-pointer"
                 >
-                  Testimonials
+                  Success Story
                 </a>
               </li>
               <li>
@@ -121,7 +121,7 @@ export function Footer() {
             </div>
             <div className="flex space-x-4 mt-4">
               <a
-                href="https://www.tiktok.com/@viralvisions"
+                href="https://www.tiktok.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"

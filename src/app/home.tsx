@@ -8,11 +8,7 @@ import { FeaturesSection } from "./(components)/features-section";
 import { HowItWorks } from "./(components)/how-it-works";
 import { FAQSection } from "./(components)/faq-section";
 
-interface HomeProps {
-  setCurrentPage: (page: string) => void;
-}
-
-export default function Home({ setCurrentPage }: HomeProps) {
+export default function Home({ setCurrentPage }) {
   return (
     <div className="space-y-16 py-16">
       <HeroSection setCurrentPage={setCurrentPage} />
@@ -22,6 +18,7 @@ export default function Home({ setCurrentPage }: HomeProps) {
         description="Get access to Stream Keys, Ban Protection, and more!"
         setCurrentPage={setCurrentPage}
       />
+
       <FeaturesSection />
       <HowItWorks setCurrentPage={setCurrentPage} />
       <CTASection
@@ -29,6 +26,7 @@ export default function Home({ setCurrentPage }: HomeProps) {
         description="Take your TikTok Live presence to new heights with ViralVisions"
         setCurrentPage={setCurrentPage}
       />
+
       <FAQSection />
     </div>
   );
