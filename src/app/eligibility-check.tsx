@@ -8,46 +8,48 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
-type Submission = {
-  email: string;
-  followers: string;
-  tiktokUsername: string;
-  agencyCode: string;
-};
-
 export default function EligibilityCheck() {
   const [email, setEmail] = useState("");
   const [followers, setFollowers] = useState("");
   const [tiktokUsername, setTiktokUsername] = useState("");
   const [agencyCode, setAgencyCode] = useState("");
-  const [submissions, setSubmissions] = useState<Submission[]>([]);
-  const [showSubmissions, setShowSubmissions] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const newSubmission: Submission = {
-      email,
-      followers,
-      tiktokUsername,
-      agencyCode,
-    };
-    setSubmissions([...submissions, newSubmission]);
-    // Reset form fields
-    setEmail("");
-    setFollowers("");
-    setTiktokUsername("");
-    setAgencyCode("");
-    alert("Form submitted successfully!");
+    const formData = new FormData(e.currentTarget);
+    
+    try {
+      const response = await fetch(
+        "https://formspree.io/f/mqazojna",
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      );
+      
+      if (response.ok) {
+        alert("Form submitted successfully!");
+        // Reset form fields
+        setEmail("");
+        setFollowers("");
+        setTiktokUsername("");
+        setAgencyCode("");
+      } else {
+        alert("Form submission failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again later.");
+    }
   };
 
   return (
-    <div
-      className="min-h-screen bg-white flex flex-col justify-center py-12 sm:px-6 lg:px-8"
-    >
+    <div className="min-h-screen bg-white flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h2
-          className="mt-6 text-center text-3xl font-extrabold text-gray-900"
-        >
+        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
           Check Eligibility
         </h2>
       </div>
@@ -61,10 +63,7 @@ export default function EligibilityCheck() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Label htmlFor="email" className="text-gray-700">
-                  Email{" "}
-                  <span className="text-red-500">
-                    *
-                  </span>
+                  Email <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   name="email"
@@ -78,14 +77,8 @@ export default function EligibilityCheck() {
               </div>
 
               <div>
-                <Label
-                  htmlFor="followers"
-                  className="text-gray-700"
-                >
-                  How Many Followers Do You Have Currently?{" "}
-                  <span className="text-red-500">
-                    *
-                  </span>
+                <Label htmlFor="followers" className="text-gray-700">
+                  How Many Followers Do You Have Currently? <span className="text-red-500">*</span>
                 </Label>
                 <RadioGroup
                   onValueChange={setFollowers}
@@ -93,56 +86,23 @@ export default function EligibilityCheck() {
                   required
                 >
                   <div className="flex items-center space-x-2">
-                    <RadioGroupItem
-                      value="below_1000"
-                      className="text-purple-600"
-                    />
-
-                    <Label
-                      htmlFor="below_1000"
-                      className="text-gray-700"
-                    >
-                      Below 1,000
-                    </Label>
+                    <RadioGroupItem value="below_1000" className="text-purple-600" />
+                    <Label htmlFor="below_1000" className="text-gray-700">Below 1,000</Label>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <RadioGroupItem
-                      value="1000_10000"
-                      className="text-purple-600"
-                    />
-
-                    <Label
-                      htmlFor="1000_10000"
-                      className="text-gray-700"
-                    >
-                      1,000 - 10,000
-                    </Label>
+                    <RadioGroupItem value="1000_10000" className="text-purple-600" />
+                    <Label htmlFor="1000_10000" className="text-gray-700">1,000 - 10,000</Label>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <RadioGroupItem
-                      value="above_10000"
-                      className="text-purple-600"
-                    />
-
-                    <Label
-                      htmlFor="above_10000"
-                      className="text-gray-700"
-                    >
-                      10,000+
-                    </Label>
+                    <RadioGroupItem value="above_10000" className="text-purple-600" />
+                    <Label htmlFor="above_10000" className="text-gray-700">10,000+</Label>
                   </div>
                 </RadioGroup>
               </div>
 
               <div>
-                <Label
-                  htmlFor="tiktok-username"
-                  className="text-gray-700"
-                >
-                  TikTok Username{" "}
-                  <span className="text-red-500">
-                    *
-                  </span>
+                <Label htmlFor="tiktok-username" className="text-gray-700">
+                  TikTok Username <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   name="tiktok-username"
@@ -155,14 +115,8 @@ export default function EligibilityCheck() {
               </div>
 
               <div>
-                <Label
-                  htmlFor="agency-code"
-                  className="text-gray-700"
-                >
-                  Agency Code{" "}
-                  <span className="text-red-500">
-                    *
-                  </span>
+                <Label htmlFor="agency-code" className="text-gray-700">
+                  Agency Code <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   name="agency-code"
@@ -184,57 +138,13 @@ export default function EligibilityCheck() {
               </div>
             </form>
             <p className="mt-4 text-sm text-gray-500">
-              <span className="text-red-500">
-                *
-              </span>{" "}
-              Required fields
+              <span className="text-red-500">*</span> Required fields
             </p>
           </CardContent>
         </Card>
       </div>
 
-      <div
-        className="mt-8 sm:mx-auto sm:w-full sm:max-w-md text-center"
-      >
-        <Button
-          onClick={() => setShowSubmissions(!showSubmissions)}
-          className="bg-purple-600 text-white hover:bg-purple-700"
-        >
-          {showSubmissions ? "Hide Submissions" : "View Submissions"}
-        </Button>
-      </div>
-
-      {showSubmissions && (
-        <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-2xl">
-          <h3 className="text-2xl font-bold mb-4">
-            Submissions
-          </h3>
-          {submissions.map((submission, index) => (
-            <Card key={index} className="mb-4">
-              <CardContent className="p-4">
-                <p>
-                  <strong>Email:</strong> {submission.email}
-                </p>
-                <p>
-                  <strong>Followers:</strong> {submission.followers}
-                </p>
-                <p>
-                  <strong>TikTok Username:</strong>{" "}
-                  {submission.tiktokUsername}
-                </p>
-                <p>
-                  <strong>Agency Code:</strong>{" "}
-                  {submission.agencyCode}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      )}
-
-      <div
-        className="mt-8 sm:mx-auto sm:w-full sm:max-w-md text-center"
-      >
+      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md text-center">
         <p className="text-sm text-purple-600">
           OR
         </p>
@@ -248,7 +158,7 @@ export default function EligibilityCheck() {
           alt="TikTok Instructions"
           width={3800}
           height={3700}
-          className="mt-4 mx-auto"
+          className="mt-10 mx-auto"
         />
       </div>
     </div>
