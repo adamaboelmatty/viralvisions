@@ -28,7 +28,7 @@ export default function LiveCreators() {
       number: "3",
       title: "Monetization Assistance",
       description:
-        "NBCN helps creators align their content with TikTok LIVE's monetization models.",
+        "ViralVisions helps creators align their content with TikTok LIVE's monetization models.",
     },
     {
       number: "4",
