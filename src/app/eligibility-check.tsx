@@ -246,8 +246,8 @@ export default function EligibilityCheck() {
         <Image
           src="/instructions.png"
           alt="TikTok Instructions"
-          width={300}
-          height={200}
+          width={1800}
+          height={1700}
           className="mt-4 mx-auto"
         />
       </div>
