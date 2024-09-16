@@ -2,7 +2,11 @@
 
 import React from "react";
 
-export function TikTokIcon({ className }) {
+interface TikTokIconProps {
+  className?: string;
+}
+
+export function TikTokIcon({ className }: TikTokIconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
