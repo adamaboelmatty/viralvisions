@@ -55,18 +55,6 @@ export function Footer() {
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSuccessStory();
-                  }}
-                  className="text-gray-400 hover:text-white cursor-pointer"
-                >
-                  Success Story
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
                     handleContact();
                   }}
                   className="text-gray-400 hover:text-white cursor-pointer"
