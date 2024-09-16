@@ -244,7 +244,7 @@ export default function EligibilityCheck() {
           to access your Agency Eligibility Code in TikTok
         </p>
         <Image
-          src="/path-to-your-tiktok-instructions-image.png"
+          src="/instructions.png"
           alt="TikTok Instructions"
           width={300}
           height={200}
