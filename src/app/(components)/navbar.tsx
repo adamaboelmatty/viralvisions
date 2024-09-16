@@ -4,7 +4,12 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-export function Navbar({ currentPage, setCurrentPage }) {
+interface NavbarProps {
+  currentPage: string;
+  setCurrentPage: (page: string) => void;
+}
+
+export function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,10 +21,7 @@ export function Navbar({ currentPage, setCurrentPage }) {
               width={40}
               height={40}
             />
-
-            <span
-              className="ml-2 text-xl font-bold text-purple-600"
-            >
+            <span className="ml-2 text-xl font-bold text-purple-600">
               ViralVisions
             </span>
           </div>
