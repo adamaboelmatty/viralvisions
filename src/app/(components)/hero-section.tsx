@@ -16,13 +16,12 @@ export function HeroSection({ setCurrentPage }: HeroSectionProps) {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center"
       >
         <h1
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6"
+          className="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6"
         >
-          Empower Your TikTok Live Journey with ViralVisions
+          Unlock Your TikTok Live Potential with ViralVisions
         </h1>
-        <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto">
-          Take your TikTok Live presence to the next level with expert
-          strategies and support.
+        <p className="text-xl sm:text-2xl mb-8 max-w-4xl mx-auto">
+        Boost Your Earnings and Influence: Expert Strategies for TikTok Live Success
         </p>
         <Button
           size="lg"
