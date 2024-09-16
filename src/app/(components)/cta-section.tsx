@@ -3,12 +3,16 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 
-export function CTASection({ title, description, setCurrentPage }) {
+interface CTASectionProps {
+  title: string;
+  description: string;
+  setCurrentPage: (page: string) => void;
+}
+
+export function CTASection({ title, description, setCurrentPage }: CTASectionProps) {
   return (
     <section className="bg-purple-600 text-white py-16">
-      <div
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-      >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-6">
           {title}
         </h2>
