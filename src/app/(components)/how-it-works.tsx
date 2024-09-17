@@ -17,13 +17,13 @@ export function HowItWorks({ setCurrentPage }: HowItWorksProps) {
     },
     {
       number: "02",
-      title: "Profile assessment",
+      title: "Profile Assessment",
       description:
         "A member of our team will share your profile with TikTok to assess whether you are eligible to join the agency.",
     },
     {
       number: "03",
-      title: "Receive invitation",
+      title: "Receive Invitation",
       description:
         "You will receive an invitation directly on your TikTok app if your profile is validated. Once you accept the invitation, you will be part of the agency!",
     },
