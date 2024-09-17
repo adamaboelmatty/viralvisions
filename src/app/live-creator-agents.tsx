@@ -20,7 +20,7 @@ export default function LiveCreatorAgentPage() {
   const [tiktokKnowledge, setTiktokKnowledge] = useState(1);
 
   const calculateReferralEarnings = (creators: number) => {
-    return creators * 70; // 70 per referral
+    return creators * 60; // 60 per referral
   };
 
   const calculateManagingEarnings = (
