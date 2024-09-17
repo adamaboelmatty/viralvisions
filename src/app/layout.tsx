@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ViralVisions | TikTok Creator Agency & Monetization Experts",
+  title: "ViralVisions | TikTok LIVE Creator Agency & Monetization Experts",
   description: "ViralVisions empowers TikTok creators to maximize earnings and grow their influence. Join our elite network for expert management, monetization strategies, and unparalleled support. Unlock your TikTok potential today",
 };
 
