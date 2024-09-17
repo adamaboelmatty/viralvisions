@@ -27,7 +27,7 @@ export default function LiveCreatorAgentPage() {
     totalManaged: number,
     knowledge: number,
   ) => {
-    return (totalManaged * 50) + (knowledge * 30);
+    return (totalManaged * 50 * 4) + (knowledge * 30);
   };
 
   return (
@@ -180,7 +180,7 @@ export default function LiveCreatorAgentPage() {
                 </div>
                 <div className="border-t pt-4">
                   <h3 className="text-lg font-semibold">
-                    Potential Weekly Earnings
+                    Potential Monthly Earnings
                   </h3>
                   <p className="text-4xl font-bold text-purple-600">
                     $
@@ -208,7 +208,7 @@ export default function LiveCreatorAgentPage() {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium mb-1">
-                    Number of influencers you can bring on board per week:
+                    Number of influencers you can bring on board:
                   </label>
                   <Input
                     type="number"
@@ -223,7 +223,7 @@ export default function LiveCreatorAgentPage() {
                 </p>
                 <div className="border-t pt-4">
                   <h3 className="text-lg font-semibold">
-                    Potential Monthly Earnings
+                    Potential Earnings
                   </h3>
                   <p className="text-4xl font-bold text-purple-600">
                     ${calculateReferralEarnings(referralCreators).toFixed(2)}
