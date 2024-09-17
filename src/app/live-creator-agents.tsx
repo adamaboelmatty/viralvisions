@@ -15,23 +15,19 @@ import { Badge } from "@/components/ui/badge";
 import { Calculator, Users, DollarSign } from "lucide-react";
 
 export default function LiveCreatorAgentPage() {
-  const [referralCreators, setReferralCreators] = useState(70);
-  const [managingHours, setManagingHours] = useState(10);
-  const [managingCreators, setManagingCreators] = useState(70);
-  const [managingTotal, setManagingTotal] = useState(300);
+  const [referralCreators, setReferralCreators] = useState(1);
+  const [managingTotal, setManagingTotal] = useState(20);
   const [tiktokKnowledge, setTiktokKnowledge] = useState(1);
 
   const calculateReferralEarnings = (creators: number) => {
-    return creators * 57.14; // Simplified calculation
+    return creators * 70; // 70 per referral
   };
 
   const calculateManagingEarnings = (
-    hours: number,
-    creators: number,
-    total: number,
+    totalManaged: number,
     knowledge: number,
   ) => {
-    return (hours * creators * total * knowledge) / 100; // Simplified calculation
+    return (totalManaged * 50) + (knowledge * 30);
   };
 
   return (
@@ -158,34 +154,6 @@ export default function LiveCreatorAgentPage() {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium mb-1">
-                    Weekly hours committed:
-                  </label>
-                  <Slider
-                    value={[managingHours]}
-                    onValueChange={(value) => setManagingHours(value[0])}
-                    max={40}
-                    step={1}
-                  />
-
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {managingHours} hours
-                  </p>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-1">
-                    New influencers onboarded per week:
-                  </label>
-                  <Input
-                    type="number"
-                    value={managingCreators}
-                    onChange={(e) =>
-                      setManagingCreators(Number(e.target.value))
-                    }
-                    className="w-full"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-1">
                     Total influencers managed:
                   </label>
                   <Input
@@ -193,6 +161,7 @@ export default function LiveCreatorAgentPage() {
                     value={managingTotal}
                     onChange={(e) => setManagingTotal(Number(e.target.value))}
                     className="w-full"
+                    min="0"
                   />
                 </div>
                 <div>
@@ -205,20 +174,17 @@ export default function LiveCreatorAgentPage() {
                     max={5}
                     step={1}
                   />
-
                   <p className="text-sm text-muted-foreground mt-1">
                     Level: {tiktokKnowledge}
                   </p>
                 </div>
                 <div className="border-t pt-4">
                   <h3 className="text-lg font-semibold">
-                    Potential Monthly Earnings
+                    Potential Weekly Earnings
                   </h3>
                   <p className="text-4xl font-bold text-purple-600">
                     $
                     {calculateManagingEarnings(
-                      managingHours,
-                      managingCreators,
                       managingTotal,
                       tiktokKnowledge,
                     ).toFixed(2)}
@@ -247,14 +213,13 @@ export default function LiveCreatorAgentPage() {
                   <Input
                     type="number"
                     value={referralCreators}
-                    onChange={(e) =>
-                      setReferralCreators(Number(e.target.value))
-                    }
+                    onChange={(e) => setReferralCreators(Number(e.target.value))}
                     className="w-full"
+                    min="0"
                   />
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Average: 40 talents per week
+                  Average: 1 talent per week
                 </p>
                 <div className="border-t pt-4">
                   <h3 className="text-lg font-semibold">
