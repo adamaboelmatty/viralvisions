@@ -15,7 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calculator, Users, DollarSign } from "lucide-react";
 
 export default function LiveCreatorAgentPage() {
-  const [referralCreators, setReferralCreators] = useState(1);
+  const [referralCreators, setReferralCreators] = useState(5);
   const [managingTotal, setManagingTotal] = useState(20);
   const [tiktokKnowledge, setTiktokKnowledge] = useState(1);
 
