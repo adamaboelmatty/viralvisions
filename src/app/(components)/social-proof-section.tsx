@@ -29,7 +29,7 @@ export function SocialProofSection() {
       stats: [
         { value: "$8,000+", label: "First Month" },
         { value: "$75/hour", label: "Average Earnings" },
-        { value: "33,000", label: "Followers" },
+        { value: "33,000+", label: "Followers" },
       ],
     },
   ];
