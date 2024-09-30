@@ -16,7 +16,7 @@ export default function LiveCreators() {
       number: "1",
       title: "Livestream on TikTok",
       description:
-        "Personal team + professional studio. Guiding creators through everything they need to know about TikTok Live.",
+        "Personal team + profesisonal guidance. Guiding creators through everything they need to know about TikTok Live.",
     },
     {
       number: "2",
@@ -28,7 +28,7 @@ export default function LiveCreators() {
       number: "3",
       title: "Monetization Assistance",
       description:
-        "NBCN helps creators align their content with TikTok LIVE's monetization models.",
+        "ViralVisions helps creators align their content with TikTok LIVE's monetization models.",
     },
     {
       number: "4",
@@ -46,7 +46,7 @@ export default function LiveCreators() {
     },
     {
       question:
-        "Can I leave the NBCN anytime I want or am I stuck in a contract?",
+        "Can I leave the ViralVision anytime I want or am I stuck in a contract?",
       answer:
         "This partnership is completely voluntary. We offer a 14-day trial period with the option to remove yourself from our roster. After the 14 days, either party can remove themselves from the partnership.",
     },
@@ -62,7 +62,7 @@ export default function LiveCreators() {
         "Gifts through personal branding and community building! Gifts received on TikTok Live equate to money that you can cash out every week. For example: 100 coins (or diamonds) = $1 USD, creators make 50% of every gift sent, so for every $1 USD you'd make 50 cents.",
     },
     {
-      question: "How can NBCN help me monetize?",
+      question: "How can ViralVisions help me monetize?",
       answer:
         "We will be your strategy team through every step of the way. We have proven methods on traffic, monetization, and community building, all of which to be covered throughout our 4 week program. Some examples of this are activate your viewers to light up gift galleries, assisting with gift goals and live battles to win big!",
     },
