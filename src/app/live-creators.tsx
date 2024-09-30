@@ -46,14 +46,9 @@ export default function LiveCreators() {
     },
     {
       question:
-        "Can I leave the ViralVision anytime I want or am I stuck in a contract?",
+        "Can I leave the ViralVisions anytime I want or am I stuck in a contract?",
       answer:
         "This partnership is completely voluntary. We offer a 14-day trial period with the option to remove yourself from our roster. After the 14 days, either party can remove themselves from the partnership.",
-    },
-    {
-      question: "What if I don't live in Los Angeles?",
-      answer:
-        "We have remote programs too! You can livestream from home if that's better for you. For our on-site creators, we can transition you to a home setup within 2 weeks of joining and mastering livestreaming!",
     },
     {
       question:
