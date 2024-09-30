@@ -17,20 +17,22 @@ export function HowItWorks({ setCurrentPage }: HowItWorksProps) {
     },
     {
       number: "02",
-      title: "Profile Assessment",
+      title: "Profile assessment",
       description:
         "A member of our team will share your profile with TikTok to assess whether you are eligible to join the agency.",
     },
     {
       number: "03",
-      title: "Receive Invitation",
+      title: "Receive invitation",
       description:
         "You will receive an invitation directly on your TikTok app if your profile is validated. Once you accept the invitation, you will be part of the agency!",
     },
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-purple-100 to-indigo-100">
+    <section
+      className="py-16 bg-gradient-to-br from-purple-100 to-indigo-100"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-12">
           How it Works
@@ -41,7 +43,9 @@ export function HowItWorks({ setCurrentPage }: HowItWorksProps) {
               key={index}
               className="bg-white p-6 rounded-lg shadow-md"
             >
-              <div className="text-3xl font-bold text-purple-600 mb-4">
+              <div
+                className="text-3xl font-bold text-purple-600 mb-4"
+              >
                 {step.number}
               </div>
               <h3 className="text-xl font-semibold mb-2">

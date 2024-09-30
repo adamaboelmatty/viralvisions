@@ -4,13 +4,6 @@ import React from "react";
 import Image from "next/image";
 
 export function Footer() {
-  const scrollToSuccessStory = () => {
-    const successStorySection = document.getElementById("testimonials");
-    if (successStorySection) {
-      successStorySection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const handleContact = () => {
     window.location.href = "mailto:help@viralvisions.live";
   };
@@ -109,7 +102,7 @@ export function Footer() {
             </div>
             <div className="flex space-x-4 mt-4">
               <a
-                href="https://www.tiktok.com"
+                href="https://www.tiktok.com/@viralvisions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"

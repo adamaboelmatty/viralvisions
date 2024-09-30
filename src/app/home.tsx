@@ -22,6 +22,7 @@ export default function Home({ setCurrentPage }: HomeProps) {
         description="Gain instant access to essential resources like Stream Keys, Ban Protection, and more."
         setCurrentPage={setCurrentPage}
       />
+
       <FeaturesSection />
       <HowItWorks setCurrentPage={setCurrentPage} />
       <CTASection
@@ -29,6 +30,7 @@ export default function Home({ setCurrentPage }: HomeProps) {
         description="Take your TikTok Live earnings to new heights with ViralVisions"
         setCurrentPage={setCurrentPage}
       />
+
       <FAQSection />
     </div>
   );
