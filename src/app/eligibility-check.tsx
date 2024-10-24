@@ -50,7 +50,7 @@ export default function EligibilityCheck() {
     <div className="min-h-screen bg-white flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Check Eligibility
+          Apply Now
         </h2>
       </div>
 
@@ -116,7 +116,7 @@ export default function EligibilityCheck() {
 
               <div>
                 <Label htmlFor="agency-code" className="text-gray-700">
-                  Agency Code <span className="text-red-500">*</span>
+                  Invitation Code <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   name="agency-code"
@@ -151,7 +151,7 @@ export default function EligibilityCheck() {
         <p className="mt-2 text-sm text-gray-600">
           Follow these Picture Instructions below
           <br />
-          to access your Agency Eligibility Code in TikTok
+          to access your Agency Invitation Code in TikTok
         </p>
         <Image
           src="/instructions.png"

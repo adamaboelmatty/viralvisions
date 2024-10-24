@@ -63,7 +63,7 @@ export function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
               className="ml-4 bg-purple-600 text-white hover:bg-purple-700"
               onClick={() => setCurrentPage("eligibility")}
             >
-              Check Eligibility
+              Apply
             </Button>
           </div>
         </div>
