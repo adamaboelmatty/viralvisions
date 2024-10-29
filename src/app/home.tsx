@@ -7,6 +7,10 @@ import { CTASection } from "./(components)/cta-section";
 import { FeaturesSection } from "./(components)/features-section";
 import { HowItWorks } from "./(components)/how-it-works";
 import { FAQSection } from "./(components)/faq-section";
+<<<<<<< HEAD
+=======
+import { LogoBannerSection } from './(components)/logo-banner-section';
+>>>>>>> 68e4be4 (Added logo banner section showcasing brand partnerships)
 
 interface HomeProps {
   setCurrentPage: (page: string) => void;
@@ -16,6 +20,10 @@ export default function Home({ setCurrentPage }: HomeProps) {
   return (
     <div className="space-y-16 py-16">
       <HeroSection setCurrentPage={setCurrentPage} />
+<<<<<<< HEAD
+=======
+      <LogoBannerSection />
+>>>>>>> 68e4be4 (Added logo banner section showcasing brand partnerships)
       <SocialProofSection />
       <CTASection
         title="Join Now for Exclusive Benefits"
