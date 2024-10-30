@@ -47,7 +47,7 @@ export function FeaturesSection() {
       testimonial: {
         quote: "3x increase in viewer retention",
         author: "Sarah K.",
-        avatar: "https://i.pravatar.cc/150?img=1",
+        avatar: "/sarah.jpg",
       },
     },
     {
@@ -60,7 +60,7 @@ export function FeaturesSection() {
       testimonial: {
         quote: "Haven't had a single issue since joining",
         author: "Mike R.",
-        avatar: "https://i.pravatar.cc/150?img=2",
+        avatar: "/matthardy.jpeg,"
       },
     },
     {
@@ -72,7 +72,7 @@ export function FeaturesSection() {
       testimonial: {
         quote: "Doubled my earnings in first month",
         author: "Alex T.",
-        avatar: "https://i.pravatar.cc/150?img=3",
+        avatar: "/alex.jpg",
       },
     },
     {
@@ -84,7 +84,7 @@ export function FeaturesSection() {
       testimonial: {
         quote: "The training transformed my approach",
         author: "Lisa M.",
-        avatar: "https://i.pravatar.cc/150?img=4",
+        avatar: "/lisa.jpg",
       },
     },
   ];
