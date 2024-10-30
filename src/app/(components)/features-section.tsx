@@ -46,8 +46,8 @@ export function FeaturesSection() {
       exclusive: true,
       testimonial: {
         quote: "3x increase in viewer retention",
-        author: "Sarah K.",
-        avatar: "/sarah.jpg",
+        author: "@zboocka",
+        avatar: "/zach.png",
       },
     },
     {
@@ -59,8 +59,8 @@ export function FeaturesSection() {
       exclusive: true,
       testimonial: {
         quote: "Haven't had a single issue since joining",
-        author: "Mike R.",
-        avatar: "/matthardy.jpeg,"
+        author: "@matthardy88",
+        avatar: "/matthardy.png"
       },
     },
     {
@@ -71,8 +71,8 @@ export function FeaturesSection() {
       exclusive: false,
       testimonial: {
         quote: "Doubled my earnings in first month",
-        author: "Alex T.",
-        avatar: "/alex.jpg",
+        author: "@blondielift",
+        avatar: "/deanna.png",
       },
     },
     {
@@ -83,8 +83,8 @@ export function FeaturesSection() {
       exclusive: true,
       testimonial: {
         quote: "The training transformed my approach",
-        author: "Lisa M.",
-        avatar: "/lisa.jpg",
+        author: "@_ryan10101_",
+        avatar: "/ryan.png",
       },
     },
   ];
