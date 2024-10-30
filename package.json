@@ -24,11 +24,7 @@
     "clsx": "^2.1.1",
     "firebase": "^10.13.2",
     "lucide-react": "^0.439.0",
-<<<<<<< HEAD
-    "next": "^14.2.13",
-=======
     "next": "^14.2.16",
->>>>>>> 68e4be4 (Added logo banner section showcasing brand partnerships)
     "react": "^18",
     "react-dom": "^18",
     "react-firebase-hooks": "^5.1.1",

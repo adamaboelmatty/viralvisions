@@ -68,8 +68,6 @@
     }
 }
 
-<<<<<<< HEAD
-=======
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -86,6 +84,4 @@
 /* Pause animation on hover */
 .animate-scroll:hover {
   animation-play-state: paused;
-}
->>>>>>> 68e4be4 (Added logo banner section showcasing brand partnerships)
-  
+}  

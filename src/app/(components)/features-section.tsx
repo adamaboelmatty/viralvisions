@@ -1,7 +1,16 @@
-'use client';
-
-import React, { useState } from "react";
+import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import {
+  Key,
+  Shield,
+  DollarSign,
+  Headphones,
+  Star,
+  ChevronRight,
+} from "lucide-react";
 import {
   Table,
   TableBody,
@@ -10,79 +19,101 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Key,
-  Shield,
-  DollarSign,
-  Headphones,
-  Users,
-  Briefcase,
-  TrendingUp,
-  Award,
-} from "lucide-react";
 
 export function FeaturesSection() {
-  const [activeTab, setActiveTab] = useState("live-creator");
+    const scrollToHowItWorks = () => {
+      const element = document.getElementById('how-it-works');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    };
+  
+    const scrollToSocialProof = () => {
+      const element = document.getElementById('social-proof');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    };
 
-  const liveCreatorFeatures = [
+  const features = [
     {
-      title: "Stream Keys",
-      description: "Access to special features for enhanced streaming",
       icon: Key,
+      title: "Stream Keys",
+      description:
+        "Unlock advanced streaming capabilities with our proprietary technology",
+      benefits: [
+        "Higher retention rates",
+        "Better engagement",
+        "Exclusive features",
+      ],
+
+      exclusive: true,
+      testimonial: {
+        quote: "3x increase in viewer retention",
+        author: "Sarah K.",
+        avatar: "https://i.pravatar.cc/150?img=1",
+      },
     },
     {
-      title: "False Ban Protection",
-      description: "Safeguard your account against unwarranted bans",
       icon: Shield,
+      title: "Ban Protection",
+      description:
+        "Advanced 24/7 account security system with proactive monitoring",
+      benefits: ["Real-time monitoring", "Instant support", "Risk prevention"],
+      exclusive: true,
+      testimonial: {
+        quote: "Haven't had a single issue since joining",
+        author: "Mike R.",
+        avatar: "https://i.pravatar.cc/150?img=2",
+      },
     },
     {
-      title: "Monetization Strategies",
-      description: "Maximize your earnings from TikTok Live",
       icon: DollarSign,
+      title: "Monetization Support",
+      description: "Strategic revenue optimization with proven methods",
+      benefits: ["Revenue strategies", "Gift optimization", "Growth planning"],
+      exclusive: false,
+      testimonial: {
+        quote: "Doubled my earnings in first month",
+        author: "Alex T.",
+        avatar: "https://i.pravatar.cc/150?img=3",
+      },
     },
     {
-      title: "Training & Support",
-      description: "Comprehensive guidance and 24/7 assistance",
       icon: Headphones,
+      title: "Expert Training",
+      description: "Personalized mentorship program with industry experts",
+      benefits: ["1-on-1 coaching", "Weekly workshops", "Resource library"],
+      exclusive: true,
+      testimonial: {
+        quote: "The training transformed my approach",
+        author: "Lisa M.",
+        avatar: "https://i.pravatar.cc/150?img=4",
+      },
     },
   ];
 
-  const liveCreatorAgentFeatures = [
+  const comparisonData = [
     {
-      title: "Manage Talents",
-      description: "Directly manage and guide TikTok Live creators",
-      icon: Users,
+      feature: "Stream Keys",
+      before: "Limited viewer retention",
+      after: "Proprietary technology boosting engagement",
+      impact: "2-3x viewer retention increase",
     },
     {
-      title: "Recruitment",
-      description: "Source and recruit new creators for the platform",
-      icon: Briefcase,
+      feature: "Ban Protection",
+      before: "Account vulnerability",
+      after: "24/7 advanced protection system",
+      impact: "99.9% account security rate",
     },
     {
-      title: "Growth Strategies",
-      description: "Develop and implement strategies for creator growth",
-      icon: TrendingUp,
+      feature: "Monetization Support",
+      before: "Inconsistent earnings",
+      after: "Strategic revenue optimization",
+      impact: "Average $5,000+ monthly earnings",
     },
     {
-      title: "Earning Potential",
-      description: "High-return opportunity based on creator success",
-      icon: Award,
+      feature: "Expert Training",
+      before: "Self-guided learning",
+      after: "Personalized mentorship program",
+      impact: "Proven success roadmap",
     },
-  ];
-
-  const liveCreatorBenefits = [
-    { feature: "Stream Key", before: "❌", after: "✅" },
-    { feature: "False Ban Protection", before: "❌", after: "✅" },
-    { feature: "Professional Training", before: "❌", after: "✅" },
-    { feature: "Monetization Assistance", before: "❌", after: "✅" },
-  ];
-
-  const liveCreatorAgentBenefits = [
-    { feature: "Manage Multiple Creators", before: "❌", after: "✅" },
-    { feature: "Recruitment Tools", before: "❌", after: "✅" },
-    { feature: "Performance Analytics", before: "❌", after: "✅" },
-    { feature: "Commission-based Earnings", before: "❌", after: "✅" },
   ];
 
   return (
@@ -91,93 +122,161 @@ export function FeaturesSection() {
         <h2 className="text-3xl font-bold text-center mb-12">
           Key Benefits
         </h2>
-        <Tabs
-          defaultValue="live-creator"
-          className="mb-12"
-          onValueChange={setActiveTab}
+
+        {/* Feature Cards */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
         >
-          <TabsList className="grid w-full grid-cols-2 mb-8">
-            <TabsTrigger value="live-creator">
-              Live Creator
-            </TabsTrigger>
-            <TabsTrigger value="live-creator-agent">
-              Live Creator Agent
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent value="live-creator">
-            <div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
+          {features.map((feature, index) => (
+            <Card
+              key={index}
+              className="relative transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-              {liveCreatorFeatures.map((feature, index) => (
-                <Card key={index} id={`r9zv2a-${index}`}>
-                  <CardHeader id={`f2exd1-${index}`}>
-                    <feature.icon className="h-10 w-10 text-purple-600 mb-4" />
-                    <CardTitle id={`1ip2h5-${index}`}>
-                      {feature.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent id={`jvduhd-${index}`}>
-                    <p className="text-gray-600" id={`rbr9fu-${index}`}>
-                      {feature.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-          <TabsContent value="live-creator-agent">
-            <div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
-            >
-              {liveCreatorAgentFeatures.map((feature, index) => (
-                <Card key={index} id={`agent-card-${index}`}>
-                  <CardHeader id={`agent-header-${index}`}>
-                    <feature.icon className="h-10 w-10 text-purple-600 mb-4" />
-                    <CardTitle id={`agent-title-${index}`}>
-                      {feature.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent id={`agent-content-${index}`}>
-                    <p className="text-gray-600" id={`agent-desc-${index}`}>
-                      {feature.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
-        <h3 className="text-2xl font-bold text-center mb-8">
-          Benefits Comparison
-        </h3>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Feature</TableHead>
-              <TableHead>Before Joining</TableHead>
-              <TableHead>After Joining</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {(activeTab === "live-creator"
-              ? liveCreatorBenefits
-              : liveCreatorAgentBenefits
-            ).map((benefit, index) => (
-              <TableRow key={index} id={`bhumcu-${index}`}>
-                <TableCell className="font-medium" id={`kwz5et-${index}`}>
-                  {benefit.feature}
-                </TableCell>
-                <TableCell id={`qzzr33-${index}`}>{benefit.before}</TableCell>
-                <TableCell
-                  className="text-purple-600 font-semibold"
-                  id={`rx713w-${index}`}
-                >
-                  {benefit.after}
-                </TableCell>
+<CardHeader className="flex flex-row items-start space-x-4 pb-2 relative"> {/* Added relative */}
+  <div className="w-14 h-14 flex items-center justify-center rounded-full bg-purple-100">
+    <feature.icon className="w-8 h-8 text-purple-600" />
+  </div>
+  <div className="flex-1">
+    <CardTitle className="text-xl mb-2">
+      {feature.title}
+    </CardTitle>
+  </div>
+  {feature.exclusive && (
+    <Badge className="absolute -top-4 -right-2 bg-purple-600"> {/* Updated positioning */}
+      Exclusive
+    </Badge>
+  )}
+</CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  {feature.description}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-center text-sm"
+                    >
+                      <Star
+                        className="w-4 h-4 text-purple-600 mr-2"
+                      />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+                <div className="border-t pt-4">
+                  <div
+                    className="flex items-center space-x-3"
+                  >
+                    <Avatar className="w-8 h-8">
+                      <AvatarImage
+                        src={feature.testimonial.avatar}
+                      />
+                      <AvatarFallback>
+                        {feature.testimonial.author[0]}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p
+                        className="text-sm italic"
+                      >
+                        {feature.testimonial.quote}
+                      </p>
+                      <p
+                        className="text-xs text-gray-500"
+                      >
+                        {feature.testimonial.author}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Comparison Table */}
+        <div className="mt-16">
+          <h3
+            className="text-2xl font-bold text-center mb-8"
+          >
+            Before & After Comparison
+          </h3>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Feature</TableHead>
+                <TableHead>
+                  Before ViralVisions
+                </TableHead>
+                <TableHead>
+                  With ViralVisions
+                </TableHead>
+                <TableHead>Impact</TableHead>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+            </TableHeader>
+            <TableBody>
+              {comparisonData.map((row, index) => (
+                <TableRow key={index}>
+                  <TableCell
+                    className="font-medium"
+                  >
+                    {row.feature}
+                  </TableCell>
+                  <TableCell
+                    className="text-red-500"
+                  >
+                    <span
+                      className="flex items-center"
+                    >
+                      <span className="mr-2">
+                        ✕
+                      </span>
+                      {row.before}
+                    </span>
+                  </TableCell>
+                  <TableCell
+                    className="text-green-600"
+                  >
+                    <span
+                      className="flex items-center"
+                    >
+                      <span className="mr-2">
+                        ✓
+                      </span>
+                      {row.after}
+                    </span>
+                  </TableCell>
+                  <TableCell
+                    className="text-purple-600 font-semibold"
+                  >
+                    {row.impact}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+
+        {/* Call-to-Action Buttons */}
+ <div className="flex justify-center space-x-6 mt-12">
+          <Button
+            size="lg"
+            className="bg-purple-600 text-white hover:bg-purple-700 transform transition-all duration-300 hover:scale-105"
+            onClick={scrollToHowItWorks}
+          >
+            See How It Works
+            <ChevronRight className="w-5 h-5 ml-2" />
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="hover:bg-purple-50 transform transition-all duration-300 hover:scale-105"
+            onClick={scrollToSocialProof}
+          >
+            View Success Stories
+          </Button>
+        </div>
       </div>
     </section>
   );
