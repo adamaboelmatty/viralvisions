@@ -14,27 +14,27 @@ export default function LiveCreators() {
   const offerings = [
     {
       number: "1",
-      title: "Livestream on TikTok",
+      title: "Professional LIVE Strategy",
       description:
-        "Personal team + profesisonal guidance. Guiding creators through everything they need to know about TikTok Live.",
+        "Our creators average 3x more viewers and 5x more gifts through our proven professional strategies and expert guidance.",
     },
     {
       number: "2",
-      title: "Exclusive Events",
+      title: "Guaranteed Growth System",
       description:
-        "Get exclusive traffic boosts and access to TikTok LIVE's official campaigns to maximize reach.",
+        "Access exclusive promotional opportunities typically reserved for top 1% of creators, ensuring consistent growth and visibility.",
     },
     {
       number: "3",
-      title: "Monetization Assistance",
+      title: "Proven Revenue Framework",
       description:
-        "ViralVisions helps creators align their content with TikTok LIVE's monetization models.",
+        "Our step-by-step system helps creators reach $5,000+ monthly through strategic gift optimization and engagement tactics.",
     },
     {
       number: "4",
-      title: "Content Guidance",
+      title: "Expert Success Coaching",
       description:
-        "Creators will receive personalized guidance on content production teams to help with logistics.",
+        "24/7 support team and weekly strategy calls to accelerate your growth with personalized guidance and proven strategies.",
     },
   ];
 
