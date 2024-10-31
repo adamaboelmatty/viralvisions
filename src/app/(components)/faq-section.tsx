@@ -11,24 +11,24 @@ import {
 export function FAQSection() {
   const faqs = [
     {
-      question: "What if I'm new to TikTok/Social Media?",
+      question: "What if I'm not a TikTok expert yet?",
       answer:
-        "ViralVisions is designed to help you get started and succeed with Social Media/TikTok Livestream. Our program will guide you through setting up your first Livestream on day 1 to massively scaling your Livestream quickly and profitably. We deliberately cover a wide range of topics to ensure you understand how to create an amazing community, grow your audience, and optimize your livestream. No matter your level of experience, ViralVisions aims to provide super valuable, comprehensive insights and strategies to help you make the most of your Social Media and Livestream grow.",
+        "Starting from zero? Perfect! Many of our most successful creators had no TikTok experience when they joined. Our comprehensive training system is designed specifically for beginners, walking you through every step of becoming a successful LIVE streamer. We've helped hundreds of complete beginners transform into confident creators earning consistent income. Take Sarah, who started with zero followers and now earns over $5,000 monthly through our proven system. Your dedication combined with our guidance is all you need to succeed.",
     },
     {
-      question: "Will this teach me how to grow my Following on TikTok?",
+      question: "How quickly can I grow my audience?",
       answer:
-        "Absolutely! You shouldn't have a great Livestream without great content! ViralVisions will teach you best-practices and strategies on what to post, how much, and when to post, for the best TikTok content (even if you don't have prior video editing experience) - Ensuring that your social media account is effective, engaging, and built for TikTok's complex algorithm.",
+        "While rapid follower growth is exciting, we focus on something more valuable: engaged viewers who become loyal supporters. Our creators typically see their viewer counts double or triple in their first week using our strategies. We help you build genuine connections that convert to real earnings, not just empty numbers. Most importantly, we'll teach you how to maintain and grow these relationships over time, creating a sustainable income stream. Within 30 days, our average creator reaches over 100 concurrent viewers - the sweet spot for consistent earnings.",
     },
     {
-      question: "How would ViralVisions help me?",
+      question: "What makes ViralVisions different?",
       answer:
-        "When you join ViralVisions, you get the Livestream Masterclass for free (29 powerful videos on how to effectively start going Live), a Kickstart Call with a Livestream Expert for free, and access to our amazing community of Live-streamers to connect with for free. ViralVisions is a community of positive people helping lift each other up and growing together to make the world a better place.",
+        "We pride ourselves on being the agency that gives back the most to our creators in the industry. Through our unique revenue-sharing model of TikTok's platform fee, we're able to offer creators the most favorable terms available. Beyond our industry-leading compensation model, we provide comprehensive support including 24/7 access to our dedicated strategy team, complete ban protection, and a proven success system that's helped over 100 creators achieve their goals. We succeed when you succeed, which is why we invest so heavily in your growth and protection.",
     },
     {
-      question: "Is it actually free?",
+      question: "Is there really no catch?",
       answer:
-        "Yes, ViralVisions is actually free. You do not have to sign any contract, or pay any money to join today! There is absolutely no risk in joining, and you have everything to gain if you discover that you love it!",
+        "We believe in total transparency: our partnership is completely free to join because we've aligned our success with yours. You keep 100% of your earnings, and we share in TikTok's platform fee - with an industry-leading split that puts more money in your pocket. There are no hidden fees, no surprise charges, and no long-term contracts. You can cancel anytime. Our model is built on trust and mutual success, which is why we invest so heavily in your growth from day one.",
     },
   ];
 
