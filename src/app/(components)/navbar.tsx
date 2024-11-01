@@ -10,6 +10,19 @@ interface NavbarProps {
 }
 
 export function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
+  const handleApply = () => {
+    // Track the click event
+    if (window.gtag) {
+      window.gtag('event', 'apply_click', {
+        'event_category': 'application',
+        'event_label': 'navbar',
+        'event_value': 'navbar_apply_button'
+      });
+    }
+    // Open in new tab
+    window.open('https://aboelmatty.notion.site/12e71460c3cb8056be60d14315388005', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,7 +74,7 @@ export function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
             </Button>
             <Button
               className="ml-4 bg-purple-600 text-white hover:bg-purple-700"
-              onClick={() => setCurrentPage("eligibility")}
+              onClick={handleApply}
             >
               Apply
             </Button>

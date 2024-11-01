@@ -1,13 +1,14 @@
+// hero-section.tsx
 'use client';
 
 import React from "react";
 import { Button } from "@/components/ui/button";
 
-interface HeroSectionProps {
-  setCurrentPage: (page: string) => void;
-}
+export function HeroSection() {
+  const handleApply = () => {
+    window.location.href = 'https://aboelmatty.notion.site/12e71460c3cb8056be60d14315388005';
+  };
 
-export function HeroSection({ setCurrentPage }: HeroSectionProps) {
   return (
     <section
       className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white"
@@ -21,12 +22,12 @@ export function HeroSection({ setCurrentPage }: HeroSectionProps) {
           Transform Your TikTok LIVE into a Lucrative Career
         </h1>
         <p className="text-xl sm:text-2xl mb-8 max-w-4xl mx-auto">
-        Join 100+ creators who transformed their LIVE streams into profitable businesses with our proven system
+          Join 100+ creators who transformed their LIVE streams into profitable businesses with our proven system
         </p>
         <Button
           size="lg"
           className="bg-white text-purple-600 hover:bg-gray-100"
-          onClick={() => setCurrentPage("eligibility")}
+          onClick={handleApply}
         >
           Start Earning Now
         </Button>
