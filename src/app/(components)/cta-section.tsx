@@ -1,4 +1,3 @@
-// cta-section.tsx
 'use client';
 
 import React from "react";
@@ -7,13 +6,10 @@ import { Button } from "@/components/ui/button";
 interface CTASectionProps {
   title: string;
   description: string;
+  setCurrentPage: (page: string) => void;
 }
 
-export function CTASection({ title, description }: CTASectionProps) {
-  const handleApply = () => {
-    window.location.href = 'https://aboelmatty.notion.site/12e71460c3cb8056be60d14315388005';
-  };
-
+export function CTASection({ title, description, setCurrentPage }: CTASectionProps) {
   return (
     <section className="bg-purple-600 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -26,7 +22,7 @@ export function CTASection({ title, description }: CTASectionProps) {
         <Button
           size="lg"
           className="bg-white text-purple-600 hover:bg-gray-100"
-          onClick={handleApply}
+          onClick={() => setCurrentPage("eligibility")}
         >
           Get Started Now
         </Button>
