@@ -4,11 +4,11 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 
-export function HeroSection() {
-  const handleApply = () => {
-    window.location.href = 'https://aboelmatty.notion.site/12e71460c3cb8056be60d14315388005';
-  };
+interface HeroSectionProps {
+  setCurrentPage: (page: string) => void;
+}
 
+export function HeroSection({ setCurrentPage }: HeroSectionProps) {
   return (
     <section
       className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white"
@@ -27,7 +27,7 @@ export function HeroSection() {
         <Button
           size="lg"
           className="bg-white text-purple-600 hover:bg-gray-100"
-          onClick={handleApply}
+          onClick={() => setCurrentPage("eligibility")}
         >
           Start Earning Now
         </Button>
