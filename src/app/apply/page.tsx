@@ -309,7 +309,7 @@ export default function EligibilityCheck() {
                             : formData.contentType.filter(t => t !== type);
                           setFormData({...formData, contentType: updatedTypes});
                         }}
-                        className="rounded border-gray-300"
+                        className="rounded border-gray-300 accent-purple-600"
                       />
                       <Label>{type}</Label>
                     </div>
@@ -327,7 +327,7 @@ export default function EligibilityCheck() {
                   name="thirtyDayCommitment"
                   value={formData.thirtyDayCommitment}
                   onValueChange={(value) => setFormData({...formData, thirtyDayCommitment: value})}
-                  className="flex flex-col space-y-1"
+                  className="flex flex-col space-y-1 accent-purple-600"
                 >
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="yes" />
