@@ -127,7 +127,3 @@
   50% { border-color: #4f46e5; }
   100% { border-color: #9333ea; }
 }
-/* Style for custom purple radio buttons */
-input[type="radio"] {
-  accent-color: #7C3AED; /* Replace with your preferred shade of purple */
-}

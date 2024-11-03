@@ -45,6 +45,7 @@ export default function EligibilityCheck() {
             birthday: formData.birthday,
             timezone: formData.timezone,
             tiktokUsername: formData.tiktokUsername,
+            invitationCode: formData.invitationCode,
             followers: formData.followers,
             monthlyTarget: formData.monthlyTarget,
             hoursPerWeek: formData.hoursPerWeek,
@@ -101,7 +102,7 @@ export default function EligibilityCheck() {
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <Card className="bg-white shadow-md">
           <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-8">
               {/* Personal Information */}
               <div>
                 <Label htmlFor="firstName">First Name*</Label>
@@ -246,7 +247,7 @@ export default function EligibilityCheck() {
                   name="monthlyTarget"
                   value={formData.monthlyTarget}
                   onValueChange={(value) => setFormData({...formData, monthlyTarget: value})}
-                  className="flex flex-col space-y-1"
+                  className="flex flex-col space-y-1 accent-purple-600"
                 >
                   {[
                     '$0-500',
@@ -254,7 +255,7 @@ export default function EligibilityCheck() {
                     '$2001-5000',
                     '$5000+'
                   ].map((range) => (
-                    <div key={range} className="flex items-center space-x-2">
+                    <div key={range} className="flex items-center space-x-2 accent-purple-600">
                       <RadioGroupItem value={range} />
                       <Label>{range}</Label>
                     </div>
@@ -269,7 +270,7 @@ export default function EligibilityCheck() {
                   name="hoursPerWeek"
                   value={formData.hoursPerWeek}
                   onValueChange={(value) => setFormData({...formData, hoursPerWeek: value})}
-                  className="flex flex-col space-y-1"
+                  className="flex flex-col space-y-1 accent-purple-600"
                 >
                   {[
                     '1-3',
@@ -277,7 +278,7 @@ export default function EligibilityCheck() {
                     '8-10',
                     '10-15'
                   ].map((range) => (
-                    <div key={range} className="flex items-center space-x-2">
+                    <div key={range} className="flex items-center space-x-2 accent-purple-600">
                       <RadioGroupItem value={range} />
                       <Label>{range}</Label>
                     </div>
