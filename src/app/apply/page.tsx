@@ -88,7 +88,7 @@ export default function EligibilityCheck() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex flex-col justify-center py-12 relative">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
          Creator Application
@@ -114,7 +114,6 @@ export default function EligibilityCheck() {
                   className="border-gray-300 focus:border-purple-500 focus:ring-purple-500"
                 />
               </div>
-
               <div>
                 <Label htmlFor="lastName">Last Name*</Label>
                 <Input
@@ -189,7 +188,7 @@ export default function EligibilityCheck() {
                   required
                   value={formData.tiktokUsername}
                   onChange={(e) => setFormData({...formData, tiktokUsername: e.target.value})}
-                  className="border-gray-300 focus:border-purple-500 focus:ring-purple-500"
+                  className="text-lg font-semibold text-gray-900 mb-6"
                 />
               </div>
               {/* Invitation Code */}
@@ -343,28 +342,33 @@ export default function EligibilityCheck() {
 
               <Button
                 type="submit"
-                className="w-full bg-purple-600 text-white hover:bg-purple-700"
+                className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-colors"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Submitting..." : "Submit Application"}
               </Button>
 
-              {/* Status Messages */}
               {submitStatus === 'success' && (
-                <div className="mt-4 p-4 bg-green-50 text-green-700 rounded-md">
-                  Application submitted successfully! We'll be in touch soon.
-                </div>
-              )}
+            <div className="mt-4 bg-green-50 border border-green-200 text-green-700 p-4 rounded-lg flex items-center">
+              <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Application submitted successfully! We'll be in touch soon.
+            </div>
+          )}
 
-              {submitStatus === 'error' && (
-                <div className="mt-4 p-4 bg-red-50 text-red-700 rounded-md">
-                  Failed to submit application. Please try again or contact support.
-                </div>
-              )}
-            </form>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+          {submitStatus === 'error' && (
+            <div className="mt-4 bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg flex items-center">
+              <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              Failed to submit application. Please try again or contact support.
+            </div>
+          )}
+        </form>
+      </CardContent>
+    </Card>
+  </div>
+</div>
   );
 }

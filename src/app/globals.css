@@ -116,3 +116,14 @@
 .section-transition {
   transition: all 0.3s ease-in-out;
 }
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes border-gradient {
+  0% { border-color: #9333ea; }
+  50% { border-color: #4f46e5; }
+  100% { border-color: #9333ea; }
+}
