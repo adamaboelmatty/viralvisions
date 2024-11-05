@@ -20,18 +20,6 @@ export function SocialProofSection() {
         { value: "<3,500", label: "Followers" },
       ],
     },
-    {
-      name: "Savannah Hazlewood",
-      role: "TikTok LIVE Creator",
-      avatar: "/savannah-hazlewood.png",
-      content: `"Joining ViralVisions was a game-changer for my TikTok career. Within my first 30 days, I saw my earnings skyrocket to <span class="text-purple-600 font-semibold">$8,000, averaging $75 per hour</span>. The support and strategies provided were invaluable."`,
-      description: `ViralVisions didn't just help me grow my following; they taught me how to monetize effectively. Their personalized approach and expert guidance helped me navigate the complexities of TikTok's algorithm and audience engagement. Even with a modest following, I was able to achieve remarkable results. ViralVisions truly empowers creators to turn their passion into a profitable venture.`,
-      stats: [
-        { value: "$8,000+", label: "First Month" },
-        { value: "$75/hour", label: "Average Earnings" },
-        { value: "33,000+", label: "Followers" },
-      ],
-    },
   ];
 
   const nextTestimonial = () => {
