@@ -269,13 +269,13 @@ export function FeaturesSection() {
             <ChevronRight className="w-5 h-5 ml-2" />
           </Button>
           <Button
-  variant="outline"
-  size="lg"
-  className="hover:bg-purple-50 transform transition-all duration-300 hover:scale-105"
-  onClick={() => window.location.href = 'https://testimonial.to/viralvisions/all'}
->
-  View Success Stories
-</Button>
+          variant="outline"
+          size="lg"
+          className="hover:bg-purple-50 transform transition-all duration-300 hover:scale-105"
+          onClick={() => window.location.href = 'https://testimonial.to/viralvisions/all'}
+        >
+          View Success Stories
+        </Button>
         </div>
       </div>
     </section>

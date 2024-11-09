@@ -3,6 +3,8 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import LiveEarningsCounter from "@/components/LiveEarningsCounter";
+import { DollarSign, Play as PlayIcon } from "lucide-react";
 
 interface HeroSectionProps {
   setCurrentPage: (page: string) => void;
@@ -24,13 +26,21 @@ export function HeroSection({ setCurrentPage }: HeroSectionProps) {
         <p className="text-xl sm:text-2xl mb-8 max-w-4xl mx-auto">
           Join 100+ creators who transformed their LIVE streams into profitable businesses with our proven system
         </p>
-        <Button
-          size="lg"
-          className="bg-white text-purple-600 hover:bg-gray-100"
-          onClick={() => setCurrentPage("eligibility")}
-        >
-          Start Earning Now
-        </Button>
+
+        {/* Side by side container with equal widths */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+          <LiveEarningsCounter />
+          
+          <div className="bg-white rounded-lg p-4 shadow-lg flex items-center gap-3 hover:bg-gray-50 transition-colors cursor-pointer w-[280px]" onClick={() => setCurrentPage("eligibility")}>
+            <div className="bg-purple-600 rounded-full p-2">
+              <PlayIcon className="w-6 h-6 text-white" />
+            </div>
+            <div className="text-left">
+              <div className="text-sm text-gray-600 font-medium">Ready to Earn?</div>
+              <div className="text-2xl font-bold text-purple-600">Apply Now</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
