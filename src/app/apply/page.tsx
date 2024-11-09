@@ -91,9 +91,7 @@ export default function EligibilityCheck() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      
+    <div className="flex flex-col min-h-screen">      
       <main className="flex-grow py-12 mb-16">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <h2 className="text-center text-3xl font-extrabold text-gray-900">
