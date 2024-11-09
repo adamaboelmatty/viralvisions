@@ -73,7 +73,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://viralvisions.live/terms-of-service"
                   className="text-gray-400 hover:text-white"
                 >
                   Terms of Service
