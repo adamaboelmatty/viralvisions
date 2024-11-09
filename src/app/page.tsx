@@ -2,11 +2,10 @@
 
 import React from "react";
 import { Navbar } from "./(components)/navbar";
-import { Footer } from "./(components)/footer";
 import Home from "./home";
 import EligibilityCheck from "./apply/page";
-import LiveCreatorAgents from "./live-creator-agents/live-creator-agents";
-import LiveCreators from "./live-creators/live-creators";
+import LiveCreatorAgents from "./live-creator-agents/page";
+import LiveCreators from "./live-creators/page";
 
 export default function Layout() {
   const [currentPage, setCurrentPage] = React.useState("home");
@@ -30,7 +29,6 @@ export default function Layout() {
 
         {currentPage === "live-creators" && <LiveCreators />}
       </main>
-      <Footer />
     </div>
   );
 }
