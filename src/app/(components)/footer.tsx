@@ -37,7 +37,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="https://viralvisions.live"
                   className="text-gray-400 hover:text-white"
                 >
                   Home
