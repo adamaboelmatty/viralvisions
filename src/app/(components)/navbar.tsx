@@ -26,17 +26,17 @@ export function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
             </span>
           </div>
           <div className="flex items-center">
-            <Button
-              variant="ghost"
-              onClick={() => setCurrentPage("home")}
-              className={
-                currentPage === "home"
-                  ? "text-purple-600"
-                  : "text-gray-600 hover:text-purple-600"
-              }
-            >
-              Home
-            </Button>
+          <Button
+            variant="ghost"
+            onClick={() => window.location.href = 'https://viralvisions.live'}
+            className={
+              currentPage === "home"
+                ? "text-purple-600"
+                : "text-gray-600 hover:text-purple-600"
+            }
+          >
+            Home
+          </Button>
             <Button
               variant="ghost"
               onClick={() => setCurrentPage("live-creators")}
