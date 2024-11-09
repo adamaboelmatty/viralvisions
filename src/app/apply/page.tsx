@@ -7,7 +7,6 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Navbar } from "@/app/(components)/navbar";
-import { Footer } from "@/app/(components)/footer";
 import Image from "next/image";
 
 export default function EligibilityCheck() {
@@ -21,6 +20,7 @@ export default function EligibilityCheck() {
     phone: "",
     birthday: "",
     timezone: "",
+    referralSource: "",
     tiktokUsername: "",
     invitationCode: "",
     followers: "",
@@ -47,6 +47,7 @@ export default function EligibilityCheck() {
             phone: formData.phone,
             birthday: formData.birthday,
             timezone: formData.timezone,
+            referralSource: formData.referralSource,
             tiktokUsername: formData.tiktokUsername,
             invitationCode: formData.invitationCode,
             followers: formData.followers,
@@ -71,6 +72,7 @@ export default function EligibilityCheck() {
           phone: "",
           birthday: "",
           timezone: "",
+          referralSource: "",
           tiktokUsername: "",
           invitationCode: "",
           followers: "",
@@ -180,6 +182,18 @@ export default function EligibilityCheck() {
                       </div>
                     ))}
                   </RadioGroup>
+                </div>
+
+                <div>
+                  <Label htmlFor="referralSource">Who recruited you to ViralVisions?</Label>
+                  <Input
+                    name="referralSource"
+                    type="text"
+                    placeholder="Enter their name or TikTok username"
+                    value={formData.referralSource}
+                    onChange={(e) => setFormData({...formData, referralSource: e.target.value})}
+                    className="border-gray-300 focus:border-purple-500 focus:ring-purple-500"
+                  />
                 </div>
 
                 {/* TikTok Information */}
@@ -375,8 +389,6 @@ export default function EligibilityCheck() {
           </Card>
         </div>
       </main>
-      
-      <Footer />
     </div>
   );
 }
