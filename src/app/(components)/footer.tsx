@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
   const handleContact = () => {
@@ -64,7 +65,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="https://viralvisions.live/privacy-policy"
                   className="text-gray-400 hover:text-white"
                 >
                   Privacy Policy
