@@ -29,6 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Add the new Datafast Analytics Script */}
+        <Script
+          defer
+          data-website-id="6730081d6d39bf15706a8446"
+          data-domain="viralvisions.live"
+          src="https://datafa.st/js/script.js"
+          strategy="afterInteractive"
+        />
         {/* Plausible Analytics Script */}
         <Script
           defer
@@ -43,7 +51,6 @@ export default function RootLayout({
             }
           `}
         </Script>
-
         {/* Hotjar Tracking Code */}
         <Script id="hotjar-setup" strategy="afterInteractive">
           {`
