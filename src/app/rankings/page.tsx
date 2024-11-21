@@ -25,13 +25,17 @@ interface Milestone {
 interface AvatarProps {
   user: User;
   getStreakBadge: (days: number) => string | null;
+  isMobile?: boolean;
 }
 
 // Helper component for avatar and tooltip
-const AvatarWithTooltip: React.FC<AvatarProps> = ({ user, getStreakBadge }) => (
+const AvatarWithTooltip: React.FC<AvatarProps> = ({ user, getStreakBadge, isMobile }) => (
   <div className="relative group">
     <div className="relative">
-      <div className="h-8 w-8 sm:h-12 sm:w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center border-2 border-white">
+      <div className={`
+        rounded-full overflow-hidden bg-gray-200 flex items-center justify-center border-2 border-white
+        ${isMobile ? 'h-16 w-16' : 'h-12 w-12'} // Larger size only on mobile
+      `}>
         <img 
           src={user.avatarUrl} 
           alt={user.username}
@@ -39,7 +43,10 @@ const AvatarWithTooltip: React.FC<AvatarProps> = ({ user, getStreakBadge }) => (
         />
       </div>
       {getStreakBadge(user.validDays) && (
-        <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 text-[10px] sm:text-xs px-1 py-0.5 bg-white text-purple-600 rounded-full border border-purple-200">
+        <div className={`
+          absolute bg-white text-purple-600 rounded-full border border-purple-200
+          ${isMobile ? '-top-2 -right-2 text-sm px-2 py-0.5' : '-top-1 -right-1 text-xs px-1 py-0.5'}
+        `}>
           {getStreakBadge(user.validDays)}
         </div>
       )}
@@ -240,7 +247,7 @@ export default function Rankings() {
 
   const renderMilestoneSquare = (milestone: Milestone, index: number) => {
     const usersAtMilestone = getUsersAtMilestone(index);
-    const remainingCount = usersAtMilestone.length - 1; // Always show 1 avatar on mobile
+    const remainingCount = usersAtMilestone.length - 1;
 
     return (
       <div
@@ -262,24 +269,39 @@ export default function Rankings() {
         </div>
         
         <div className="flex flex-wrap gap-1 justify-center items-center">
-          {/* Mobile view - single avatar */}
+          {/* Mobile view - single larger avatar */}
           <div className="block md:hidden">
             {usersAtMilestone.slice(0, 1).map((user) => (
-              <AvatarWithTooltip key={user.id} user={user} getStreakBadge={getStreakBadge} />
+              <AvatarWithTooltip 
+                key={user.id} 
+                user={user} 
+                getStreakBadge={getStreakBadge}
+                isMobile={true}
+              />
             ))}
+            {usersAtMilestone.length > 1 && (
+              <div className="h-8 w-8 rounded-full bg-gray-200 bg-opacity-50 flex items-center justify-center border-2 border-white text-white absolute bottom-2 right-2">
+                <span className="text-xs font-semibold">+{usersAtMilestone.length - 1}</span>
+              </div>
+            )}
           </div>
-          {/* Desktop view - up to 4 avatars */}
+
+          {/* Desktop view - regular sized avatars */}
           <div className="hidden md:flex flex-wrap gap-1 justify-center items-center">
             {usersAtMilestone.slice(0, 4).map((user) => (
-              <AvatarWithTooltip key={user.id} user={user} getStreakBadge={getStreakBadge} />
+              <AvatarWithTooltip 
+                key={user.id} 
+                user={user} 
+                getStreakBadge={getStreakBadge}
+                isMobile={false}
+              />
             ))}
+            {usersAtMilestone.length > 4 && (
+              <div className="h-12 w-12 rounded-full bg-gray-200 bg-opacity-50 flex items-center justify-center border-2 border-white text-white">
+                <span className="text-base font-semibold">+{usersAtMilestone.length - 4}</span>
+              </div>
+            )}
           </div>
-          
-          {remainingCount > 0 && (
-            <div className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-gray-200 bg-opacity-50 flex items-center justify-center border-2 border-white text-white">
-              <span className="text-xs sm:text-base font-semibold">+{remainingCount}</span>
-            </div>
-          )}
         </div>
       </div>
     );
