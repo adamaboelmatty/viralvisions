@@ -92,33 +92,34 @@ export function MilestoneBoard() {
 
   return (
     <div className="space-y-8">
-      <div className="grid grid-cols-10 gap-2">
+      {/* Change grid-cols-10 to be responsive */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-2 sm:gap-3">
         {milestones.map((milestone, index) => (
           <div
             key={index}
-            className={`relative h-32 rounded-lg flex flex-col items-center justify-between p-4 ${
+            className={`relative min-h-[160px] sm:h-32 rounded-lg flex flex-col items-center justify-between p-2 sm:p-4 ${
               milestone.reward ? "bg-[#FFD700]" : "bg-[#7B2CBF]"
             } ${milestone.reward ? "text-black" : "text-white"}`}
           >
-            <div className="text-center">
-              <div className="text-sm font-bold">
+            <div className="text-center w-full">
+              <div className="text-lg sm:text-xl font-bold">
                 {(milestone.diamonds / 1000).toFixed(0)}K
               </div>
               {milestone.reward && (
-                <div className="text-xs font-semibold">
-                  ${milestone.reward}
+                <div className="bg-white rounded-lg py-1 px-2 mx-auto w-fit mt-1">
+                  <div className="text-purple-600 font-semibold">
+                    ${milestone.reward}
+                  </div>
                 </div>
               )}
             </div>
 
-            <div className="h-20 w-full px-1 overflow-y-auto">
-              <div className="grid grid-cols-2 gap-1">
-                {getCreatorsForMilestone(milestone.diamonds).map((creator) => (
+            <div className="w-full px-1 overflow-y-auto">
+              <div className="flex flex-wrap justify-center gap-1">
+                {getCreatorsForMilestone(milestone.diamonds).slice(0, 4).map((creator) => (
                   <div key={creator.username} className="relative group">
                     <div className="relative">
-                      <Avatar
-                        className="h-10 w-10 border-2 border-white"
-                      >
+                      <Avatar className="h-8 w-8 sm:h-10 sm:w-10 border-2 border-white">
                         <AvatarImage
                           src={`https://picsum.photos/seed/${creator.username}/40/40`}
                         />
@@ -127,26 +128,27 @@ export function MilestoneBoard() {
                         </AvatarFallback>
                       </Avatar>
                       {getStreakEmoji(creator.currentStreak) && (
-                        <div className="absolute -top-2 -right-2 text-sm">
+                        <div className="absolute -top-1 -right-1 text-xs sm:text-sm">
                           {getStreakEmoji(creator.currentStreak)}
                         </div>
                       )}
                     </div>
-                    {/* Simple Tooltip */}
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 bg-black/90 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2 pointer-events-none">
-                      <div className="space-y-2">
-                        <h4 className="text-sm font-semibold">{creator.username}</h4>
-                        <p className="text-sm">Diamonds: {formatDiamondCount(creator.diamondCount)}</p>
-                        <p className="text-sm">Current Streak: {creator.currentStreak} days</p>
-                        <p className="text-xs text-gray-400">
-                          {getDaysUntilNextTier(creator.currentStreak)}
-                        </p>
+                    {/* Mobile-friendly tooltip positioning */}
+                    <div className="absolute -bottom-24 left-1/2 transform -translate-x-1/2 w-48 sm:w-64 bg-black/90 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2">
+                      <div className="space-y-1">
+                        <h4 className="font-semibold">{creator.username}</h4>
+                        <p>Diamonds: {formatDiamondCount(creator.diamondCount)}</p>
+                        <p>Streak: {creator.currentStreak} days</p>
                       </div>
-                      {/* Tooltip Arrow */}
-                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black/90 rotate-45"></div>
+                      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black/90 rotate-45"></div>
                     </div>
                   </div>
                 ))}
+                {getCreatorsForMilestone(milestone.diamonds).length > 4 && (
+                  <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-white/20 flex items-center justify-center text-white text-sm">
+                    +{getCreatorsForMilestone(milestone.diamonds).length - 4}
+                  </div>
+                )}
               </div>
             </div>
           </div>
