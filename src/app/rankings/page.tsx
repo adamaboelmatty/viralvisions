@@ -209,60 +209,57 @@ export default function Rankings() {
 
   const renderMilestoneSquare = (milestone: Milestone, index: number) => {
     const usersAtMilestone = getUsersAtMilestone(index);
-    const maxDisplayAvatars = 4;
+    const maxDisplayAvatars = window.innerWidth < 768 ? 1 : 4;
     const remainingCount = usersAtMilestone.length - maxDisplayAvatars;
 
     return (
       <div
         key={index}
         onClick={() => setSelectedMilestone(index)}
-        className={`rounded-lg p-2 flex flex-col justify-between cursor-pointer hover:scale-105 transition-all duration-300 h-full ${
+        className={`aspect-square rounded-lg p-2 flex flex-col justify-between cursor-pointer hover:scale-105 transition-all duration-300 ${
           milestone.reward ? 'bg-yellow-400 hover:bg-yellow-300' : 'bg-purple-600 hover:bg-purple-500'
         } animate-fade-in relative`}
       >
         <div className="text-white text-center">
-          <div className="font-bold text-xl">{milestone.label}</div>
+          <div className="font-bold text-lg sm:text-xl">{milestone.label}</div>
           {milestone.reward && (
-            <div className="text-base font-semibold">${milestone.rewardAmount}</div>
+            <div className="bg-white rounded-lg py-1 px-2 mx-auto w-fit mt-1">
+              <div className="text-purple-600 font-semibold text-sm sm:text-base">
+                ${milestone.rewardAmount}
+              </div>
+            </div>
           )}
         </div>
         
-        <div className="flex flex-wrap gap-2 justify-center items-center mt-2">
-        {usersAtMilestone.slice(0, maxDisplayAvatars).map((user) => {
-  const streakBadge = getStreakBadge(user.validDays);
-  return (
-    <div key={user.id} className="relative group">
-      <div className="relative">
-        <div className="h-12 w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center border-2 border-white">
-          <img 
-            src={user.avatarUrl} 
-            alt={user.username}
-            className="w-full h-full object-cover"
-          />
-        </div>
-        {streakBadge && (
-          <div 
-            className="absolute -top-2 -right-2 text-xs px-1.5 py-0.5 bg-white text-purple-600 rounded-full border border-purple-200"
-          >
-            {streakBadge}
-          </div>
-        )}
-      </div>
-      {/* Simple Tooltip */}
-      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-44 bg-black/90 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2 pointer-events-none">
-        <p className="font-bold">@{user.username}</p>
-        <p>Diamonds: {user.diamondCount.toLocaleString()}</p>
-        <p>Active Days: {user.validDays}</p>
-        {/* Added triangle */}
-        <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black/90 rotate-45"></div>
-      </div>
-    </div>
-  );
-})}
+        <div className="flex flex-wrap gap-1 justify-center items-center">
+          {usersAtMilestone.slice(0, maxDisplayAvatars).map((user) => (
+            <div key={user.id} className="relative group">
+              <div className="relative">
+                <div className="h-8 w-8 sm:h-12 sm:w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center border-2 border-white">
+                  <img 
+                    src={user.avatarUrl} 
+                    alt={user.username}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {getStreakBadge(user.validDays) && (
+                  <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 text-[10px] sm:text-xs px-1 py-0.5 bg-white text-purple-600 rounded-full border border-purple-200">
+                    {getStreakBadge(user.validDays)}
+                  </div>
+                )}
+              </div>
+              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-36 sm:w-44 bg-black/90 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2">
+                <p className="font-bold">@{user.username}</p>
+                <p>Diamonds: {user.diamondCount.toLocaleString()}</p>
+                <p>Active Days: {user.validDays}</p>
+                <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black/90 rotate-45"></div>
+              </div>
+            </div>
+          ))}
           
           {remainingCount > 0 && (
-            <div className="h-12 w-12 rounded-full bg-gray-200 bg-opacity-50 flex items-center justify-center border-2 border-white text-white">
-              <span className="text-base font-semibold">+{remainingCount}</span>
+            <div className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-gray-200 bg-opacity-50 flex items-center justify-center border-2 border-white text-white">
+              <span className="text-xs sm:text-base font-semibold">+{remainingCount}</span>
             </div>
           )}
         </div>
@@ -271,17 +268,17 @@ export default function Rankings() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 min-h-screen flex flex-col">
+    <div className="container mx-auto px-4 py-4 sm:py-8 min-h-screen flex flex-col">
       {/* Days Legend */}
-      <div className="flex justify-end mb-4">
-        <div className="flex gap-2 text-sm">
-          <div className="bg-white rounded-full px-3 py-1 border border-gray-200 shadow-sm">
+      <div className="flex justify-end mb-4 overflow-x-auto pb-2">
+        <div className="flex gap-2 text-xs sm:text-sm whitespace-nowrap">
+          <div className="bg-white rounded-full px-2 sm:px-3 py-1 border border-gray-200 shadow-sm">
             <span>🔥 3+ Days</span>
           </div>
-          <div className="bg-white rounded-full px-3 py-1 border border-gray-200 shadow-sm">
+          <div className="bg-white rounded-full px-2 sm:px-3 py-1 border border-gray-200 shadow-sm">
             <span>⭐ 10+ Days</span>
           </div>
-          <div className="bg-white rounded-full px-3 py-1 border border-gray-200 shadow-sm">
+          <div className="bg-white rounded-full px-2 sm:px-3 py-1 border border-gray-200 shadow-sm">
             <span>👑 30+ Days</span>
           </div>
         </div>
@@ -289,34 +286,28 @@ export default function Rankings() {
 
       {/* Main Grid */}
       <div className="flex-1">
-        <div className="grid grid-rows-4 gap-4">
-          {[0, 1, 2, 3].map((row) => (
-            <div key={row} className="grid grid-cols-5 gap-4">
-              {allMilestones
-                .slice(row * 5, (row + 1) * 5)
-                .map((milestone, index) => renderMilestoneSquare(milestone, row * 5 + index))}
-            </div>
-          ))}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-4">
+          {allMilestones.map((milestone, index) => renderMilestoneSquare(milestone, index))}
         </div>
       </div>
 
       {/* Reward Milestones */}
-      <div className="mt-8 mb-8">
+      <div className="mt-4 sm:mt-8">
         <div className="flex items-center gap-2 mb-4">
           <Trophy className="h-5 w-5 text-yellow-500" />
-          <h2 className="text-xl font-bold">Reward Milestones</h2>
+          <h2 className="text-lg sm:text-xl font-bold">Reward Milestones</h2>
         </div>
-        <div className="grid grid-cols-5 gap-4 bg-yellow-50 p-4 rounded-lg">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-4 bg-yellow-50 p-2 sm:p-4 rounded-lg">
           {allMilestones
             .filter(m => m.reward)
             .map((milestone, index) => (
               <div
                 key={index}
-                className="bg-white p-4 rounded-lg text-center shadow-sm border border-yellow-200"
+                className="bg-white p-2 sm:p-4 rounded-lg text-center shadow-sm border border-yellow-200"
               >
-                <div className="font-bold text-xl mb-1">{milestone.label}</div>
-                <div className="text-purple-600">
-                  Reward: ${milestone.rewardAmount}
+                <div className="font-bold text-base sm:text-xl mb-1">{milestone.label}</div>
+                <div className="text-purple-600 text-sm sm:text-base">
+                  ${milestone.rewardAmount}
                 </div>
               </div>
             ))}
@@ -324,13 +315,13 @@ export default function Rankings() {
       </div>
 
       {/* Important Notes and Legend Section */}
-      <div className="bg-white rounded-lg shadow-sm p-6 mt-4">
+      <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 mt-4">
         <div className="flex items-start gap-3">
           <Info className="w-5 h-5 mt-1 text-gray-600 flex-shrink-0" />
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <div>
-              <h2 className="text-xl font-semibold mb-3">Important Notes:</h2>
-              <ul className="space-y-2 text-gray-700">
+              <h2 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Important Notes:</h2>
+              <ul className="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
                 <li>• Rewards reset monthly and are not stackable</li>
                 <li>• Diamond counts must be achieved within a single calendar month</li>
                 <li>• Each milestone must be verified by our team</li>
@@ -338,14 +329,14 @@ export default function Rankings() {
               </ul>
             </div>
             
-            <div className="flex gap-6 pt-2 border-t">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 pt-2 border-t">
               <div className="flex items-center gap-2">
                 <span className="w-4 h-4 rounded-full bg-yellow-400"></span>
-                <span>Reward Milestone</span>
+                <span className="text-sm sm:text-base">Reward Milestone</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-4 h-4 rounded-full bg-purple-600"></span>
-                <span>Progress Milestone</span>
+                <span className="text-sm sm:text-base">Progress Milestone</span>
               </div>
             </div>
           </div>
