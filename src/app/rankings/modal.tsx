@@ -29,17 +29,25 @@ interface ModalProps {
 export function Modal({ isOpen, onClose, milestone, users }: ModalProps) {
   if (!isOpen) return null;
 
+  React.useEffect(() => {
+    // Prevent background scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
+
   return (
     <div 
-      className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" 
+      className="fixed inset-0 bg-black/50 z-50 flex items-start justify-center pt-10" 
       onClick={onClose}
     >
       <div 
-        className="bg-white rounded-2xl max-w-md w-full max-h-[80vh] overflow-hidden"
+        className="bg-white rounded-2xl max-w-md w-full mx-4"
         onClick={e => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="p-4 border-b">
+        <div className="p-4 border-b sticky top-0 bg-white rounded-t-2xl">
           <div className="flex justify-between items-center">
             <h2 className="text-xl font-bold">
               {milestone.label} Milestone
@@ -58,8 +66,8 @@ export function Modal({ isOpen, onClose, milestone, users }: ModalProps) {
           </div>
         </div>
 
-        {/* User List */}
-        <div className="overflow-y-auto">
+        {/* User List - Now with fixed height and scroll */}
+        <div className="max-h-[60vh] overflow-y-auto">
           {users.length > 0 ? (
             <div className="divide-y">
               {users.map((user) => (
