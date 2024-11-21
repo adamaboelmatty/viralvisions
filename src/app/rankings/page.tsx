@@ -228,34 +228,37 @@ export default function Rankings() {
         </div>
         
         <div className="flex flex-wrap gap-2 justify-center items-center mt-2">
-          {usersAtMilestone.slice(0, maxDisplayAvatars).map((user) => {
-            const streakBadge = getStreakBadge(user.validDays);
-            return (
-              <div key={user.id} className="relative group">
-                <div className="relative">
-                  <div className="h-12 w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center border-2 border-white">
-                    <img 
-                      src={user.avatarUrl} 
-                      alt={user.username}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  {streakBadge && (
-                    <Badge 
-                      className="absolute -top-2 -right-2 text-xs px-1 py-0.5 bg-white text-purple-600"
-                    >
-                      {streakBadge}
-                    </Badge>
-                  )}
-                </div>
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 w-44 p-2 bg-black text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <p className="font-bold">@{user.username}</p>
-                  <p>Diamonds: {user.diamondCount.toLocaleString()}</p>
-                  <p>Active Days: {user.validDays}</p>
-                </div>
-              </div>
-            );
-          })}
+        {usersAtMilestone.slice(0, maxDisplayAvatars).map((user) => {
+  const streakBadge = getStreakBadge(user.validDays);
+  return (
+    <div key={user.id} className="relative group">
+      <div className="relative">
+        <div className="h-12 w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center border-2 border-white">
+          <img 
+            src={user.avatarUrl} 
+            alt={user.username}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        {streakBadge && (
+          <div 
+            className="absolute -top-2 -right-2 text-xs px-1.5 py-0.5 bg-white text-purple-600 rounded-full border border-purple-200"
+          >
+            {streakBadge}
+          </div>
+        )}
+      </div>
+      {/* Simple Tooltip */}
+      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-44 bg-black/90 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2 pointer-events-none">
+        <p className="font-bold">@{user.username}</p>
+        <p>Diamonds: {user.diamondCount.toLocaleString()}</p>
+        <p>Active Days: {user.validDays}</p>
+        {/* Added triangle */}
+        <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black/90 rotate-45"></div>
+      </div>
+    </div>
+  );
+})}
           
           {remainingCount > 0 && (
             <div className="h-12 w-12 rounded-full bg-gray-200 bg-opacity-50 flex items-center justify-center border-2 border-white text-white">
