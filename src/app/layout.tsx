@@ -3,6 +3,9 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Script from 'next/script';
 import { Footer } from './(components)/footer';  // Add this import
+import Achievements from "app/achievements/page";
+import { MilestoneBoard } from "./(components)/milestone-board";
+import { Badge } from "@/components/ui/badge";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

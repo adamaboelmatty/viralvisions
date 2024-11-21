@@ -6,6 +6,7 @@ import Home from "./home";
 import EligibilityCheck from "./apply/page";
 import LiveCreatorAgents from "./live-creator-agents/page";
 import LiveCreators from "./live-creators/page";
+import Achievements from "./rankings/page"; // Add this import
 
 export default function Layout() {
   const [currentPage, setCurrentPage] = React.useState("home");
@@ -28,6 +29,8 @@ export default function Layout() {
         )}
 
         {currentPage === "live-creators" && <LiveCreators />}
+        
+        {currentPage === "achievements" && <Achievements />}
       </main>
     </div>
   );
