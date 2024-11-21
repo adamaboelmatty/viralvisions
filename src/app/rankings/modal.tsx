@@ -31,20 +31,21 @@ export function Modal({ isOpen, onClose, milestone, users }: ModalProps) {
 
   return (
     <div 
-      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" 
+      className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" 
       onClick={onClose}
     >
       <div 
-        className="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto" 
+        className="bg-white rounded-2xl max-w-md w-full max-h-[80vh] overflow-hidden"
         onClick={e => e.stopPropagation()}
       >
-        <div className="p-4">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-bold">
+        {/* Header */}
+        <div className="p-4 border-b">
+          <div className="flex justify-between items-center">
+            <h2 className="text-xl font-bold">
               {milestone.label} Milestone
               {milestone.reward && (
                 <span className="ml-2 text-purple-600">
-                  (Reward: ${milestone.rewardAmount})
+                  (${milestone.rewardAmount})
                 </span>
               )}
             </h2>
@@ -55,49 +56,54 @@ export function Modal({ isOpen, onClose, milestone, users }: ModalProps) {
               ×
             </button>
           </div>
-          <div className="space-y-2">
-            {users.length > 0 ? (
-              users.map((user) => (
+        </div>
+
+        {/* User List */}
+        <div className="overflow-y-auto">
+          {users.length > 0 ? (
+            <div className="divide-y">
+              {users.map((user) => (
                 <div
                   key={user.id}
-                  className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-200"
+                  className="flex items-center gap-4 p-4 hover:bg-gray-50"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center border-2 border-white">
-                      {user.avatarUrl ? (
-                        <img 
-                          src={user.avatarUrl} 
-                          alt={user.username}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <span className="text-lg font-semibold text-gray-700">
-                          {user.username[0].toUpperCase()}
-                        </span>
-                      )}
+                  {/* Avatar */}
+                  <div className="relative flex-shrink-0">
+                    <div className="w-14 h-14 rounded-full overflow-hidden">
+                      <img 
+                        src={user.avatarUrl} 
+                        alt={user.username}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    <div>
-                      <p className="font-bold">@{user.username}</p>
-                      <p className="text-gray-600">
-                        {user.diamondCount.toLocaleString()} Diamonds
-                        <span className="ml-2">· Active Days: {user.validDays}</span>
-                      </p>
+                    {user.validDays >= 3 && (
+                      <div className="absolute -top-2 -right-2 bg-white rounded-full px-2 py-0.5 border shadow-sm">
+                        <span className="text-sm">
+                          {user.validDays >= 30 ? '👑' : user.validDays >= 10 ? '🌟' : '🔥'}
+                          <span className="ml-1">{user.validDays}</span>
+                        </span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* User Info */}
+                  <div className="flex-1 min-w-0">
+                    <div className="font-medium text-base">@{user.username}</div>
+                    <div className="text-gray-500 text-sm">
+                      {user.diamondCount.toLocaleString()} Diamonds
+                    </div>
+                    <div className="text-gray-500 text-sm">
+                      Active Days: {user.validDays}
                     </div>
                   </div>
-                  {user.validDays >= 3 && (
-                    <Badge className="text-sm px-2 py-1">
-                      {user.validDays >= 30 ? '👑' : user.validDays >= 10 ? '🌟' : '🔥'}
-                      {user.validDays} days
-                    </Badge>
-                  )}
                 </div>
-              ))
-            ) : (
-              <p className="text-center text-gray-500 text-base py-6">
-                No creators at this milestone yet
-              </p>
-            )}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="p-8 text-center text-gray-500">
+              No creators at this milestone yet
+            </div>
+          )}
         </div>
       </div>
     </div>
