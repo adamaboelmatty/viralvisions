@@ -1,7 +1,6 @@
 'use client';
 
 import React from "react";
-import { Badge } from "@/components/ui/badge";
 
 interface User {
   id: string;
@@ -27,15 +26,19 @@ interface ModalProps {
 }
 
 export function Modal({ isOpen, onClose, milestone, users }: ModalProps) {
-  if (!isOpen) return null;
-
   React.useEffect(() => {
-    // Prevent background scrolling when modal is open
-    document.body.style.overflow = 'hidden';
+    if (isOpen) {
+      // Prevent background scrolling when modal is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, []);
+  }, [isOpen]); // Add `isOpen` to dependency array
+
+  if (!isOpen) return null;
 
   return (
     <div 
