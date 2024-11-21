@@ -22,6 +22,37 @@ interface Milestone {
   rewardAmount: number;
 }
 
+interface AvatarProps {
+  user: User;
+  getStreakBadge: (days: number) => string | null;
+}
+
+// Helper component for avatar and tooltip
+const AvatarWithTooltip: React.FC<AvatarProps> = ({ user, getStreakBadge }) => (
+  <div className="relative group">
+    <div className="relative">
+      <div className="h-8 w-8 sm:h-12 sm:w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center border-2 border-white">
+        <img 
+          src={user.avatarUrl} 
+          alt={user.username}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      {getStreakBadge(user.validDays) && (
+        <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 text-[10px] sm:text-xs px-1 py-0.5 bg-white text-purple-600 rounded-full border border-purple-200">
+          {getStreakBadge(user.validDays)}
+        </div>
+      )}
+    </div>
+    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-36 sm:w-44 bg-black/90 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2">
+      <p className="font-bold">@{user.username}</p>
+      <p>Diamonds: {user.diamondCount.toLocaleString()}</p>
+      <p>Active Days: {user.validDays}</p>
+      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black/90 rotate-45"></div>
+    </div>
+  </div>
+);
+
 export default function Rankings() {
   const [selectedMilestone, setSelectedMilestone] = React.useState<number | null>(null);
 
@@ -209,8 +240,7 @@ export default function Rankings() {
 
   const renderMilestoneSquare = (milestone: Milestone, index: number) => {
     const usersAtMilestone = getUsersAtMilestone(index);
-    const maxDisplayAvatars = window.innerWidth < 768 ? 1 : 4;
-    const remainingCount = usersAtMilestone.length - maxDisplayAvatars;
+    const remainingCount = usersAtMilestone.length - 1; // Always show 1 avatar on mobile
 
     return (
       <div
@@ -232,30 +262,18 @@ export default function Rankings() {
         </div>
         
         <div className="flex flex-wrap gap-1 justify-center items-center">
-          {usersAtMilestone.slice(0, maxDisplayAvatars).map((user) => (
-            <div key={user.id} className="relative group">
-              <div className="relative">
-                <div className="h-8 w-8 sm:h-12 sm:w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center border-2 border-white">
-                  <img 
-                    src={user.avatarUrl} 
-                    alt={user.username}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                {getStreakBadge(user.validDays) && (
-                  <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 text-[10px] sm:text-xs px-1 py-0.5 bg-white text-purple-600 rounded-full border border-purple-200">
-                    {getStreakBadge(user.validDays)}
-                  </div>
-                )}
-              </div>
-              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-36 sm:w-44 bg-black/90 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2">
-                <p className="font-bold">@{user.username}</p>
-                <p>Diamonds: {user.diamondCount.toLocaleString()}</p>
-                <p>Active Days: {user.validDays}</p>
-                <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black/90 rotate-45"></div>
-              </div>
-            </div>
-          ))}
+          {/* Mobile view - single avatar */}
+          <div className="block md:hidden">
+            {usersAtMilestone.slice(0, 1).map((user) => (
+              <AvatarWithTooltip key={user.id} user={user} getStreakBadge={getStreakBadge} />
+            ))}
+          </div>
+          {/* Desktop view - up to 4 avatars */}
+          <div className="hidden md:flex flex-wrap gap-1 justify-center items-center">
+            {usersAtMilestone.slice(0, 4).map((user) => (
+              <AvatarWithTooltip key={user.id} user={user} getStreakBadge={getStreakBadge} />
+            ))}
+          </div>
           
           {remainingCount > 0 && (
             <div className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-gray-200 bg-opacity-50 flex items-center justify-center border-2 border-white text-white">
