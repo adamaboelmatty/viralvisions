@@ -1,7 +1,6 @@
 'use client';
 
 import React from "react";
-import { Badge } from "@/components/ui/badge";
 
 interface User {
   id: string;
@@ -27,39 +26,44 @@ interface ModalProps {
 }
 
 export function Modal({ isOpen, onClose, milestone, users }: ModalProps) {
+  React.useEffect(() => {
+    // Prevent background scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
+
   if (!isOpen) return null;
 
   return (
     <div 
-      className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" 
       onClick={onClose}
     >
       <div 
-        className="bg-white rounded-2xl max-w-md w-full max-h-[80vh] overflow-hidden"
+        className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-full max-w-md rounded-2xl max-h-[90vh] flex flex-col overflow-hidden"
         onClick={e => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="p-4 border-b">
-          <div className="flex justify-between items-center">
-            <h2 className="text-xl font-bold">
-              {milestone.label} Milestone
-              {milestone.reward && (
-                <span className="ml-2 text-purple-600">
-                  (${milestone.rewardAmount})
-                </span>
-              )}
-            </h2>
-            <button
-              onClick={onClose}
-              className="text-2xl text-gray-500 hover:text-gray-700"
-            >
-              ×
-            </button>
-          </div>
+        <div className="p-4 border-b flex items-center justify-between sticky top-0 bg-white z-10">
+          <h2 className="text-xl font-bold">
+            {milestone.label} Milestone
+            {milestone.reward && (
+              <span className="ml-2 text-purple-600">
+                (${milestone.rewardAmount})
+              </span>
+            )}
+          </h2>
+          <button
+            onClick={onClose}
+            className="text-2xl text-gray-500 hover:text-gray-700 w-8 h-8 flex items-center justify-center"
+          >
+            ×
+          </button>
         </div>
 
-        {/* User List */}
-        <div className="overflow-y-auto">
+        {/* Scrollable Content */}
+        <div className="flex-1 overflow-y-auto">
           {users.length > 0 ? (
             <div className="divide-y">
               {users.map((user) => (
@@ -68,22 +72,12 @@ export function Modal({ isOpen, onClose, milestone, users }: ModalProps) {
                   className="flex items-center gap-4 p-4 hover:bg-gray-50"
                 >
                   {/* Avatar */}
-                  <div className="relative flex-shrink-0">
-                    <div className="w-14 h-14 rounded-full overflow-hidden">
-                      <img 
-                        src={user.avatarUrl} 
-                        alt={user.username}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    {user.validDays >= 3 && (
-                      <div className="absolute -top-2 -right-2 bg-white rounded-full px-2 py-0.5 border shadow-sm">
-                        <span className="text-sm">
-                          {user.validDays >= 30 ? '👑' : user.validDays >= 10 ? '🌟' : '🔥'}
-                          <span className="ml-1">{user.validDays}</span>
-                        </span>
-                      </div>
-                    )}
+                  <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+                    <img 
+                      src={user.avatarUrl} 
+                      alt={user.username}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
 
                   {/* User Info */}
@@ -96,6 +90,16 @@ export function Modal({ isOpen, onClose, milestone, users }: ModalProps) {
                       Active Days: {user.validDays}
                     </div>
                   </div>
+
+                  {/* Streak Badge - Moved to right side */}
+                  {user.validDays >= 3 && (
+                    <div className="flex-shrink-0 bg-white rounded-full px-3 py-1.5 shadow-sm border">
+                      <span className="text-sm whitespace-nowrap">
+                        {user.validDays >= 30 ? '👑' : user.validDays >= 10 ? '🌟' : '🔥'}
+                        <span className="ml-1">{user.validDays}</span>
+                      </span>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
