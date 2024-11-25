@@ -125,7 +125,7 @@ export default function Rankings() {
     {
       id: "7434529706084663297",
       username: "hill.andrew",
-      avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/5f9e20ea62693a9c07ddc68651a91413~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=9502&refresh_token=1ea5f67969416d3ecfb3f8f565bc6728&x-expires=1732233600&x-signature=xOlZgvecWeANX1juExPDbr3t63M%3D&shp=a5d48078&shcp=81f88b70",
+      avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/5f9e20ea62693a9c07ddc68651a91413~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=14075&refresh_token=8218b946d10b9d07d91e13048a29a0fc&x-expires=1732748400&x-signature=Trnj0GNPffCSlILODOnXlGVlQ0E%3D&shp=a5d48078&shcp=81f88b70",
       diamondCount: 295485,
       currentStreak: 12,
       validDays: 12
@@ -189,7 +189,7 @@ export default function Rankings() {
     {
       id: "7428778451936542736",
       username: "theportersonntag",
-      avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/10094ef56d1c5c825d7c56a2808ece67~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=45971&refresh_token=35f6a3b180e5b97349818af0ea26af8d&x-expires=1732233600&x-signature=VvMS6aryGFGogJLncCxeWMGWBRk%3D&shp=a5d48078&shcp=81f88b70",
+      avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/10094ef56d1c5c825d7c56a2808ece67~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=1761&refresh_token=ccf65e0f0d842c5af048a3208e8ad04a&x-expires=1732744800&x-signature=DSzToEQQW04D4Kmtfr%2BWpaUQ1Q4%3D&shp=a5d48078&shcp=81f88b70",
       diamondCount: 54230,
       currentStreak: 8,
       validDays: 8
