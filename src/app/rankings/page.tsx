@@ -126,7 +126,7 @@ export default function Rankings() {
       id: "7434529706084663297",
       username: "hill.andrew",
       avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/5f9e20ea62693a9c07ddc68651a91413~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=9502&refresh_token=1ea5f67969416d3ecfb3f8f565bc6728&x-expires=1732233600&x-signature=xOlZgvecWeANX1juExPDbr3t63M%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 280401,
+      diamondCount: 295485,
       currentStreak: 12,
       validDays: 12
     },
@@ -134,7 +134,7 @@ export default function Rankings() {
       id: "7430599854776156176",
       username: "treasurerinaldi",
       avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/d138a0ac7d63fb18963ff01f7d5f5f28~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=3684&refresh_token=3aa0bafff055635961658be3d388b243&x-expires=1732665600&x-signature=WVVXaQaL%2FyDwPGCOWuBD2cTfWk8%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 214757,
+      diamondCount: 230226,
       currentStreak: 10,
       validDays: 10
     },
@@ -158,7 +158,7 @@ export default function Rankings() {
       id: "7428778607167717393",
       username: "meggan_horn",
       avatarUrl: "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/921df000bb99f72264c08d607eae7102~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=12043&refresh_token=de956f2d1e6ba6af006c0ecef0c78cff&x-expires=1732665600&x-signature=DMMsRxCeUrevX7OhdWoPUH%2FyECc%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 90512,
+      diamondCount: 90516,
       currentStreak: 17,
       validDays: 17
     },
@@ -166,7 +166,7 @@ export default function Rankings() {
       id: "7433525532181921809",
       username: "graceschouvieller",
       avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/9788d959487ce02871bcea13a6492511~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=17837&refresh_token=3bba530a935eff9ca34c042ca822fb00&x-expires=1732665600&x-signature=Sygu%2BglBovmU5pLkrqAIfAjSWFc%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 63483,
+      diamondCount: 78959,
       currentStreak: 11,
       validDays: 11
     },
@@ -190,7 +190,7 @@ export default function Rankings() {
       id: "7428778451936542736",
       username: "theportersonntag",
       avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/10094ef56d1c5c825d7c56a2808ece67~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=45971&refresh_token=35f6a3b180e5b97349818af0ea26af8d&x-expires=1732233600&x-signature=VvMS6aryGFGogJLncCxeWMGWBRk%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 45742,
+      diamondCount: 54230,
       currentStreak: 8,
       validDays: 8
     },
@@ -198,7 +198,7 @@ export default function Rankings() {
       id: "7435873073317888001",
       username: "lexaaajane",
       avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/db6cc1bdf54e8f141b9b5ebec6811da7~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=38003&refresh_token=baad3f033c22dad231b78d8d68fd0231&x-expires=1732665600&x-signature=iT7fAhL2tfe2fJ%2FEhoqMh6sYV74%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 43884,
+      diamondCount: 93898,
       currentStreak: 3,
       validDays: 3
     },
@@ -222,7 +222,7 @@ export default function Rankings() {
       id: "7434692820197457937",
       username: "josiebae9",
       avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/8c7b533a793cd23f99b5ba2ec0e250db~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=85160&refresh_token=2f1c84239349996f245a680eefc694d9&x-expires=1732665600&x-signature=MoaxRPVX3J93GaVSZsn0ZD5BbJo%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 21303,
+      diamondCount: 23673,
       currentStreak: 1,
       validDays: 1
     },
@@ -230,7 +230,7 @@ export default function Rankings() {
       id: "7440258372751966208",
       username: "taylormayberry",
       avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/8ca13cd7e6e2b255e0256db37f50a093~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=30372&refresh_token=7d0c3135a0b5d4b3a158f8a02f4f80cf&x-expires=1732665600&x-signature=64hUIOYmusUzBYsr5IXwHeHj7O4%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 16373,
+      diamondCount: 16785,
       currentStreak: 1,
       validDays: 1
     },
@@ -254,7 +254,7 @@ export default function Rankings() {
     id: "7435452847371698192",
     username: "haileygracieee",
     avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/10ce84005f31b58bb3e299e71d838190~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=24964&refresh_token=ab45e810331a708dbf7577fe36271006&x-expires=1732665600&x-signature=ev76BiK7w7azvEUKo6XwOyMfuJM%3D&shp=a5d48078&shcp=81f88b70",
-    diamondCount: 3467,
+    diamondCount: 10065,
     currentStreak: 4,
     validDays: 4
   },
@@ -270,7 +270,7 @@ export default function Rankings() {
     id: "7440258052529373200",
     username: "sillyrabiitrixare4kids",
     avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/df6bd41963164e71de76ace162817787~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=87466&refresh_token=00fb5bbdc95dab539b1107524ebdc07c&x-expires=1732665600&x-signature=v0%2FXXDsHmPOb94nABHwqCj%2B1srg%3D&shp=a5d48078&shcp=81f88b70",
-    diamondCount: 1001,
+    diamondCount: 4969,
     currentStreak: 0,
     validDays: 0
   },
@@ -310,7 +310,7 @@ export default function Rankings() {
     id: "7439177061366857744",
     username: "tyler.mac1",
     avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/e2c6b67db4873ef4df3464488d586f6e~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=35467&refresh_token=b4109d39e8871212689f36c274c82f45&x-expires=1732665600&x-signature=lsK3ctdrJ3BnqNe5vHy0czJpkwc%3D&shp=a5d48078&shcp=81f88b70",
-    diamondCount: 650,
+    diamondCount: 655,
     currentStreak: 1,
     validDays: 1
   },
