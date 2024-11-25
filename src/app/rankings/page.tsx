@@ -133,7 +133,7 @@ export default function Rankings() {
     {
       id: "7430599854776156176",
       username: "treasurerinaldi",
-      avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/d138a0ac7d63fb18963ff01f7d5f5f28~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=50940&refresh_token=553fd0eca8c2f1b49834465486e4bea5&x-expires=1732233600&x-signature=tERP6IcZ7I91J9YkAf2g9b1TQgs%3D&shp=a5d48078&shcp=81f88b70",
+      avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/d138a0ac7d63fb18963ff01f7d5f5f28~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=3684&refresh_token=3aa0bafff055635961658be3d388b243&x-expires=1732665600&x-signature=WVVXaQaL%2FyDwPGCOWuBD2cTfWk8%3D&shp=a5d48078&shcp=81f88b70",
       diamondCount: 214757,
       currentStreak: 10,
       validDays: 10
