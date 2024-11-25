@@ -149,7 +149,7 @@ export default function Rankings() {
     {
       id: "7429910374083805201",
       username: "_ryan10101_",
-      avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/b630c5982ed3b26e5441c4f4308e9b0a~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=98597&refresh_token=e6c60df3011d84f83d0a4ba6ef41b197&x-expires=1732233600&x-signature=zxHFXZ6IBcVOLp7y%2BZ2GYagXMBk%3D&shp=a5d48078&shcp=81f88b70",
+      avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/b630c5982ed3b26e5441c4f4308e9b0a~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=51075&refresh_token=cc95999bd9dbd37fc826c193bee0f552&x-expires=1732665600&x-signature=kKCdRVAzIPfPg45uGlL2%2FtCayus%3D&shp=a5d48078&shcp=81f88b70",
       diamondCount: 91400,
       currentStreak: 9,
       validDays: 9
@@ -173,7 +173,7 @@ export default function Rankings() {
     {
       id: "7429916855852122129",
       username: "matthardy88",
-      avatarUrl: "https://p19-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/2f883ab2ea8cdb1223ffbca1b582390b~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=105&refresh_token=9a17ea6dea8c510830d7b698bf0377c4&x-expires=1732233600&x-signature=eucyT9kzLEd8HlAiDTI%2BcgFC6%2FE%3D&shp=a5d48078&shcp=81f88b70",
+      avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/da0fb3e1a055583b8fa9cd0cbe82c788~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=11510&refresh_token=2abd7340ea0fd494c3498307241319d2&x-expires=1732665600&x-signature=gyObdoFloPUqsZgePuKgeUpqy%2Fs%3D&shp=a5d48078&shcp=81f88b70",
       diamondCount: 56391,
       currentStreak: 8,
       validDays: 8
@@ -197,7 +197,7 @@ export default function Rankings() {
     {
       id: "7435873073317888001",
       username: "lexaaajane",
-      avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/db6cc1bdf54e8f141b9b5ebec6811da7~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=53459&refresh_token=85d8aaec53c7a35904e5dccbf22d8bc4&x-expires=1732233600&x-signature=0EHQkhN9nHG0IicNjz%2BxnPdtsm0%3D&shp=a5d48078&shcp=81f88b70",
+      avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/db6cc1bdf54e8f141b9b5ebec6811da7~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=38003&refresh_token=baad3f033c22dad231b78d8d68fd0231&x-expires=1732665600&x-signature=iT7fAhL2tfe2fJ%2FEhoqMh6sYV74%3D&shp=a5d48078&shcp=81f88b70",
       diamondCount: 43884,
       currentStreak: 3,
       validDays: 3
@@ -205,7 +205,7 @@ export default function Rankings() {
     {
       id: "7429931422900666385",
       username: "rhayatherton",
-      avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/cc8f208da0f505d2df524e97ed4ed509~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=32839&refresh_token=c84b7fbfcde999cd361051e987d86e63&x-expires=1732392000&x-signature=GoxVUva5vaE0%2BfUTVzi50lmwc7g%3D&shp=a5d48078&shcp=81f88b70",
+      avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/cc8f208da0f505d2df524e97ed4ed509~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=72380&refresh_token=530e64bb1a05a25b6affd224964f883e&x-expires=1732665600&x-signature=9HqtjpRV6r0KXzB4RjvTGhvhweE%3D&shp=a5d48078&shcp=81f88b70",
       diamondCount: 24246,
       currentStreak: 2,
       validDays: 2
@@ -221,7 +221,7 @@ export default function Rankings() {
     {
       id: "7434692820197457937",
       username: "josiebae9",
-      avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/8c7b533a793cd23f99b5ba2ec0e250db~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=74760&refresh_token=7aa9692b0382e3bfb40dcc725706ce73&x-expires=1732233600&x-signature=3TirRKkqRb1V0juBXA58i0%2BslU0%3D&shp=a5d48078&shcp=81f88b70",
+      avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/8c7b533a793cd23f99b5ba2ec0e250db~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=85160&refresh_token=2f1c84239349996f245a680eefc694d9&x-expires=1732665600&x-signature=MoaxRPVX3J93GaVSZsn0ZD5BbJo%3D&shp=a5d48078&shcp=81f88b70",
       diamondCount: 21303,
       currentStreak: 1,
       validDays: 1
@@ -245,7 +245,7 @@ export default function Rankings() {
     {
       id: "7438773484378947585",
       username: "swagmaster1738",
-      avatarUrl: "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/fd05f71f6011fa25bfb0fa9e6e350241~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=81380&refresh_token=d6dd7fa12ed4b1e26c0e6cd43acf2628&x-expires=1732392000&x-signature=QECv%2BurkitPkjTiPJTkGHgMh4Ek%3D&shp=a5d48078&shcp=81f88b70",
+      avatarUrl: "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/fd05f71f6011fa25bfb0fa9e6e350241~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=85692&refresh_token=2ec39c31e47e7c2ee54d43f4dfde43d7&x-expires=1732665600&x-signature=U69U7wTMuDDhHAqPJZUwYracUVI%3D&shp=a5d48078&shcp=81f88b70",
       diamondCount: 3483,
       currentStreak: 2,
       validDays: 2
@@ -261,7 +261,7 @@ export default function Rankings() {
   {
     id: "7433515005670064129",
     username: "hevbev_3",
-    avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/16cf2b05c0fb907c2d6e4382d9747dd7~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=36008&refresh_token=f0571be38179e5cb70a405e9da167def&x-expires=1732392000&x-signature=yfUpzd3ynbPPvfHNmYQ%2F5F0kfaw%3D&shp=a5d48078&shcp=81f88b70",
+    avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/16cf2b05c0fb907c2d6e4382d9747dd7~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=23173&refresh_token=f9a082489b374c5eeb2a5c3da5c649cc&x-expires=1732665600&x-signature=UGdwK%2FHETpkZ55uKzb02ZQ%2BtdaM%3D&shp=a5d48078&shcp=81f88b70",
     diamondCount: 2070,
     currentStreak: 4,
     validDays: 4
@@ -277,7 +277,7 @@ export default function Rankings() {
   {
     id: "7438773724033122321",
     username: ".aubbie",
-    avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/1e38b2d232186645d38f63d000b2c222~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=25822&refresh_token=344a6aa67018f0bd75a2f98301949cee&x-expires=1732392000&x-signature=iKmq9o1TI%2FSEiJDcQzxiYG6SMUw%3D&shp=a5d48078&shcp=81f88b70",
+    avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/1e38b2d232186645d38f63d000b2c222~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=98262&refresh_token=0e0fb5349f577774c8536fbf9be5dfed&x-expires=1732665600&x-signature=TIfT9X%2BcFEsyGvD%2B13wc3wexIKc%3D&shp=a5d48078&shcp=81f88b70",
     diamondCount: 908,
     currentStreak: 1,
     validDays: 1
@@ -285,7 +285,7 @@ export default function Rankings() {
   {
     id: "7429932355579789313",
     username: ".nqlan",
-    avatarUrl: "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/74ac40e807d05c7f80f7c7ada66032c9~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=88480&refresh_token=bd724165e0694498e692112604918015&x-expires=1732392000&x-signature=9KYmttQSxF%2Bf7xgoPdzRpOR%2Btbw%3D&shp=a5d48078&shcp=81f88b70",
+    avatarUrl: "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/74ac40e807d05c7f80f7c7ada66032c9~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=15590&refresh_token=3323a55f5c1dc76641cb25e9405464c6&x-expires=1732665600&x-signature=0rvhOZMhsSricRB0laJsF7Dj%2B9A%3D&shp=a5d48078&shcp=81f88b70",
     diamondCount: 894,
     currentStreak: 1,
     validDays: 1
@@ -309,7 +309,7 @@ export default function Rankings() {
   {
     id: "7439177061366857744",
     username: "tyler.mac1",
-    avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/e2c6b67db4873ef4df3464488d586f6e~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=94440&refresh_token=d13addaece7091e45e6baba30d7bb51e&x-expires=1732392000&x-signature=VZSFIgdrfH0EByDYqfuOdZ%2FwBHo%3D&shp=a5d48078&shcp=81f88b70",
+    avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/e2c6b67db4873ef4df3464488d586f6e~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=35467&refresh_token=b4109d39e8871212689f36c274c82f45&x-expires=1732665600&x-signature=lsK3ctdrJ3BnqNe5vHy0czJpkwc%3D&shp=a5d48078&shcp=81f88b70",
     diamondCount: 650,
     currentStreak: 1,
     validDays: 1
@@ -325,7 +325,7 @@ export default function Rankings() {
   {
     id: "7433839668661059601",
     username: "mariahbarelaa",
-    avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/c2f23a54273c6ab8b200fc7b28f40fbc~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=66824&refresh_token=f6c4b8d559a4cb4a9b61eaf2d5228866&x-expires=1732233600&x-signature=S85IAqZyr4rPFidkaI3W%2FBevaSo%3D&shp=a5d48078&shcp=81f88b70",
+    avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/c2f23a54273c6ab8b200fc7b28f40fbc~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=58876&refresh_token=5cd1cee36f9027417c003dea3cd4f66b&x-expires=1732665600&x-signature=zGZjBQB%2BHyCx%2FJsC6ETXxtOAR2s%3D&shp=a5d48078&shcp=81f88b70",
     diamondCount: 332,
     currentStreak: 2,
     validDays: 2
@@ -333,7 +333,7 @@ export default function Rankings() {
   {
     id: "7430624377831702544",
     username: "brilampert",
-    avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/0065528a58dbf9935402dbd7586caff3~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=71567&refresh_token=0d417f94de614fa0d7116a583164691c&x-expires=1732233600&x-signature=LRjPl54c7cT1n96FoE1OmmMM%2B1A%3D&shp=a5d48078&shcp=81f88b70",
+    avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/0065528a58dbf9935402dbd7586caff3~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=91174&refresh_token=4dc0db72c6683529709879f2614fc7d9&x-expires=1732665600&x-signature=rVLTjfirVZbZnwvyIzfRVJib1z0%3D&shp=a5d48078&shcp=81f88b70",
     diamondCount: 214,
     currentStreak: 2,
     validDays: 2
@@ -373,7 +373,7 @@ export default function Rankings() {
   {
     id: "7431259659777884161",
     username: "elainabenoit",
-    avatarUrl: "https://p19-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/8940f9cb9b20fd1f74628cdfebd0f056~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=42677&refresh_token=23f01d58217a351f2a3ebee7596ff1dc&x-expires=1732392000&x-signature=QsIqDJnF3JJXFEwpOBzlifVfj4E%3D&shp=a5d48078&shcp=81f88b70",
+    avatarUrl: "https://p19-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/8940f9cb9b20fd1f74628cdfebd0f056~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=58056&refresh_token=00ee0c8366e251180d79f02a5e3d28ed&x-expires=1732665600&x-signature=9fsH%2FTdjzLgDqXSrS%2Fh1xxJA34g%3D&shp=a5d48078&shcp=81f88b70",
     diamondCount: 0,
     currentStreak: 0,
     validDays: 0
@@ -452,7 +452,7 @@ export default function Rankings() {
 {
   id: "7437098060410257425",
   username: "soothingscrubs",
-  avatarUrl: "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/26766b47b1e7d723154c4ca8ceebeb11~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=94881&refresh_token=270eee39f2d95ad1fa58c5c8715a0ef1&x-expires=1732392000&x-signature=f6ZON50guxgqg6aCZR3kS%2FPjvJI%3D&shp=a5d48078&shcp=81f88b70",
+  avatarUrl: "https://p19-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/26766b47b1e7d723154c4ca8ceebeb11~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=15102&refresh_token=2b25b0e3888c9087dec30ed78bc73fa6&x-expires=1732665600&x-signature=xnB85Y4l%2BiEsobQoSkqIwpY4ado%3D&shp=a5d48078&shcp=81f88b70",
   diamondCount: 0,
   currentStreak: 0,
   validDays: 0
