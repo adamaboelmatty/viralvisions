@@ -448,14 +448,6 @@ export default function Rankings() {
   diamondCount: 0,
   currentStreak: 0,
   validDays: 0
-},
-  {
-  id: "7437098060410257425",
-  username: "soothingscrubs",
-  avatarUrl: "https://p19-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/26766b47b1e7d723154c4ca8ceebeb11~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=15102&refresh_token=2b25b0e3888c9087dec30ed78bc73fa6&x-expires=1732665600&x-signature=xnB85Y4l%2BiEsobQoSkqIwpY4ado%3D&shp=a5d48078&shcp=81f88b70",
-  diamondCount: 0,
-  currentStreak: 0,
-  validDays: 0
 }
 ].sort((a, b) => b.diamondCount - a.diamondCount);
     return users.filter(
