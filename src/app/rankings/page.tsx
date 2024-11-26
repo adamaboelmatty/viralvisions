@@ -369,8 +369,9 @@ export default function Rankings() {
       validDays: 0,
       // Other properties...
     }];
+    if (!milestone) return []; // Safety check if the index is invalid
     return users.filter(
-      user => user.diamondCount >= range.min && user.diamondCount < range.max
+      user => user.diamondCount >= milestone.diamonds && user.diamondCount < (index + 1 < allMilestones.length ? allMilestones[index + 1].diamonds : Infinity)
     );
   };
 
