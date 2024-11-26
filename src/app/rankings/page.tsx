@@ -63,7 +63,7 @@ const AvatarWithTooltip: React.FC<AvatarProps> = ({ user, getStreakBadge, isMobi
 export default function Rankings() {
   const [selectedMilestone, setSelectedMilestone] = React.useState<number | null>(null);
 
-  // New milestone ranges definition
+  // Milestone ranges definition
   const getMilestoneRanges = [
     { min: 0, max: 199999, label: "100K" },         // 0-100K
     { min: 200000, max: 299999, label: "200K" },    // 200K-300K
@@ -104,6 +104,20 @@ export default function Rankings() {
       rewardAmount
     };
   });
+
+  const getStreakBadge = (days: number) => {
+    if (days >= 30) return `👑${days}`;
+    if (days >= 10) return `🌟${days}`;
+    if (days >= 3) return `🔥${days}`;
+    return null;
+  };
+
+  const getUsersAtMilestone = (index: number) => {
+    const range = getMilestoneRanges[index];
+    return users.filter(
+      user => user.diamondCount >= range.min && user.diamondCount < range.max
+    );
+  };
 
   const users = [
   {
@@ -440,175 +454,155 @@ export default function Rankings() {
   diamondCount: 0,
   currentStreak: 0,
   validDays: 0
-},
-  {
-  id: "7437289492555382800",
-  username: "savybrooks",
-  avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/87c4ce87b1192768b86fbbe4668ac572~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=54086&refresh_token=14456f671efba4e8b6132c955edab2ef&x-expires=1732665600&x-signature=voHlCuyfUFkBs49mcVnOO%2BJ3I80%3D&shp=a5d48078&shcp=81f88b70",
-  diamondCount: 0,
-  currentStreak: 0,
-  validDays: 0
 }
 ].sort((a, b) => b.diamondCount - a.diamondCount);
-    return users.filter(
-      user => user.diamondCount >= range.min && user.diamondCount < range.max
-    );
-  };
 
-  const getStreakBadge = (days: number) => {
-    if (days >= 30) return `👑${days}`;
-    if (days >= 10) return `🌟${days}`;
-    if (days >= 3) return `🔥${days}`;
-    return null;
-  };
+const renderMilestoneSquare = (milestone: Milestone, index: number) => {
+  const usersAtMilestone = getUsersAtMilestone(index);
+  const remainingCount = usersAtMilestone.length - 1;
 
-  const renderMilestoneSquare = (milestone: Milestone, index: number) => {
-    const usersAtMilestone = getUsersAtMilestone(index);
-    const remainingCount = usersAtMilestone.length - 1;
-
-    return (
-      <div
-        key={index}
-        onClick={() => setSelectedMilestone(index)}
-        className={`aspect-square rounded-lg p-2 flex flex-col justify-between cursor-pointer hover:scale-105 transition-all duration-300 ${
-          milestone.reward ? 'bg-yellow-400 hover:bg-yellow-300' : 'bg-purple-600 hover:bg-purple-500'
-        } animate-fade-in relative`}
-      >
-        <div className="text-white text-center">
-          <div className="font-bold text-lg sm:text-xl">{milestone.label}</div>
-          {milestone.reward && (
-            <div className="bg-white rounded-lg py-1 px-2 mx-auto w-fit mt-1">
-              <div className="text-purple-600 font-semibold text-sm sm:text-base">
-                ${milestone.rewardAmount}
-              </div>
+  return (
+    <div
+      key={index}
+      onClick={() => setSelectedMilestone(index)}
+      className={`aspect-square rounded-lg p-2 flex flex-col justify-between cursor-pointer hover:scale-105 transition-all duration-300 ${
+        milestone.reward ? 'bg-yellow-400 hover:bg-yellow-300' : 'bg-purple-600 hover:bg-purple-500'
+      } animate-fade-in relative`}
+    >
+      <div className="text-white text-center">
+        <div className="font-bold text-lg sm:text-xl">{milestone.label}</div>
+        {milestone.reward && (
+          <div className="bg-white rounded-lg py-1 px-2 mx-auto w-fit mt-1">
+            <div className="text-purple-600 font-semibold text-sm sm:text-base">
+              ${milestone.rewardAmount}
+            </div>
+          </div>
+        )}
+      </div>
+      
+      <div className="flex flex-wrap gap-1 justify-center items-center">
+        {/* Mobile view - single larger avatar */}
+        <div className="block md:hidden">
+          {usersAtMilestone.slice(0, 1).map((user) => (
+            <AvatarWithTooltip 
+              key={user.id} 
+              user={user} 
+              getStreakBadge={getStreakBadge}
+              isMobile={true}
+            />
+          ))}
+          {usersAtMilestone.length > 1 && (
+            <div className="h-8 w-8 rounded-full bg-gray-200 bg-opacity-50 flex items-center justify-center border-2 border-white text-white absolute bottom-2 right-2">
+              <span className="text-xs font-semibold">+{usersAtMilestone.length - 1}</span>
             </div>
           )}
         </div>
-        
-        <div className="flex flex-wrap gap-1 justify-center items-center">
-          {/* Mobile view - single larger avatar */}
-          <div className="block md:hidden">
-            {usersAtMilestone.slice(0, 1).map((user) => (
-              <AvatarWithTooltip 
-                key={user.id} 
-                user={user} 
-                getStreakBadge={getStreakBadge}
-                isMobile={true}
-              />
-            ))}
-            {usersAtMilestone.length > 1 && (
-              <div className="h-8 w-8 rounded-full bg-gray-200 bg-opacity-50 flex items-center justify-center border-2 border-white text-white absolute bottom-2 right-2">
-                <span className="text-xs font-semibold">+{usersAtMilestone.length - 1}</span>
-              </div>
-            )}
-          </div>
 
-          {/* Desktop view - regular sized avatars */}
-          <div className="hidden md:flex flex-wrap gap-1 justify-center items-center">
-            {usersAtMilestone.slice(0, 12).map((user) => (
-              <AvatarWithTooltip 
-                key={user.id} 
-                user={user} 
-                getStreakBadge={getStreakBadge}
-                isMobile={false}
-              />
-            ))}
-            {usersAtMilestone.length > 12 && (
-              <div className="h-12 w-12 rounded-full bg-gray-200 bg-opacity-50 flex items-center justify-center border-2 border-white text-white">
-                <span className="text-base font-semibold">+{usersAtMilestone.length - 12}</span>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    );
-  };
-
-  return (
-    <div className="container mx-auto px-4 py-4 sm:py-8 min-h-screen flex flex-col">
-      {/* Days Legend */}
-      <div className="flex justify-end mb-4 overflow-x-auto pb-2">
-        <div className="flex gap-2 text-xs sm:text-sm whitespace-nowrap">
-          <div className="bg-white rounded-full px-2 sm:px-3 py-1 border border-gray-200 shadow-sm">
-            <span>🔥 3+ Days</span>
-          </div>
-          <div className="bg-white rounded-full px-2 sm:px-3 py-1 border border-gray-200 shadow-sm">
-            <span>⭐ 10+ Days</span>
-          </div>
-          <div className="bg-white rounded-full px-2 sm:px-3 py-1 border border-gray-200 shadow-sm">
-            <span>👑 30+ Days</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Grid */}
-      <div className="flex-1">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-4">
-          {allMilestones.map((milestone, index) => renderMilestoneSquare(milestone, index))}
-        </div>
-      </div>
-
-      {/* Reward Milestones */}
-      <div className="mt-4 sm:mt-8">
-        <div className="flex items-center gap-2 mb-4">
-          <Trophy className="h-5 w-5 text-yellow-500" />
-          <h2 className="text-lg sm:text-xl font-bold">Reward Milestones</h2>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-4 bg-yellow-50 p-2 sm:p-4 rounded-lg">
-          {allMilestones
-            .filter(m => m.reward)
-            .map((milestone, index) => (
-              <div
-                key={index}
-                className="bg-white p-2 sm:p-4 rounded-lg text-center shadow-sm border border-yellow-200"
-              >
-                <div className="font-bold text-base sm:text-xl mb-1">{milestone.label}</div>
-                <div className="text-purple-600 text-sm sm:text-base">
-                  ${milestone.rewardAmount}
-                </div>
-              </div>
-            ))}
-        </div>
-      </div>
-
-      {/* Important Notes and Legend Section */}
-      <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 mt-4">
-        <div className="flex items-start gap-3">
-          <Info className="w-5 h-5 mt-1 text-gray-600 flex-shrink-0" />
-          <div className="space-y-4 sm:space-y-6">
-            <div>
-              <h2 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Important Notes:</h2>
-              <ul className="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
-                <li>• Rewards reset monthly and are not stackable</li>
-                <li>• Diamond counts must be achieved within a single calendar month</li>
-                <li>• Each milestone must be verified by our team</li>
-                <li>• Payouts are processed at the end of that calendar month</li>
-              </ul>
+        {/* Desktop view - regular sized avatars */}
+        <div className="hidden md:flex flex-wrap gap-1 justify-center items-center">
+          {usersAtMilestone.slice(0, 12).map((user) => (
+            <AvatarWithTooltip 
+              key={user.id} 
+              user={user} 
+              getStreakBadge={getStreakBadge}
+              isMobile={false}
+            />
+          ))}
+          {usersAtMilestone.length > 12 && (
+            <div className="h-12 w-12 rounded-full bg-gray-200 bg-opacity-50 flex items-center justify-center border-2 border-white text-white">
+              <span className="text-base font-semibold">+{usersAtMilestone.length - 12}</span>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 pt-2 border-t">
-              <div className="flex items-center gap-2">
-                <span className="w-4 h-4 rounded-full bg-yellow-400"></span>
-                <span className="text-sm sm:text-base">Reward Milestone</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-4 h-4 rounded-full bg-purple-600"></span>
-                <span className="text-sm sm:text-base">Progress Milestone</span>
-              </div>
-            </div>
-          </div>
+          )}
         </div>
       </div>
-
-      {/* Modal */}
-      {selectedMilestone !== null && (
-        <Modal
-          isOpen={selectedMilestone !== null}
-          onClose={() => setSelectedMilestone(null)}
-          milestone={allMilestones[selectedMilestone]}
-          users={getUsersAtMilestone(selectedMilestone)}
-        />
-      )}
     </div>
   );
+};
+return (
+  <div className="container mx-auto px-4 py-4 sm:py-8 min-h-screen flex flex-col">
+    {/* Days Legend */}
+    <div className="flex justify-end mb-4 overflow-x-auto pb-2">
+      <div className="flex gap-2 text-xs sm:text-sm whitespace-nowrap">
+        <div className="bg-white rounded-full px-2 sm:px-3 py-1 border border-gray-200 shadow-sm">
+          <span>🔥 3+ Days</span>
+        </div>
+        <div className="bg-white rounded-full px-2 sm:px-3 py-1 border border-gray-200 shadow-sm">
+          <span>⭐ 10+ Days</span>
+        </div>
+        <div className="bg-white rounded-full px-2 sm:px-3 py-1 border border-gray-200 shadow-sm">
+          <span>👑 30+ Days</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Main Grid */}
+    <div className="flex-1">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-4">
+        {allMilestones.map((milestone, index) => renderMilestoneSquare(milestone, index))}
+      </div>
+    </div>
+
+    {/* Reward Milestones */}
+    <div className="mt-4 sm:mt-8">
+      <div className="flex items-center gap-2 mb-4">
+        <Trophy className="h-5 w-5 text-yellow-500" />
+        <h2 className="text-lg sm:text-xl font-bold">Reward Milestones</h2>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-4 bg-yellow-50 p-2 sm:p-4 rounded-lg">
+        {allMilestones
+          .filter(m => m.reward)
+          .map((milestone, index) => (
+            <div
+              key={index}
+              className="bg-white p-2 sm:p-4 rounded-lg text-center shadow-sm border border-yellow-200"
+            >
+              <div className="font-bold text-base sm:text-xl mb-1">{milestone.label}</div>
+              <div className="text-purple-600 text-sm sm:text-base">
+                ${milestone.rewardAmount}
+              </div>
+            </div>
+          ))}
+      </div>
+    </div>
+
+    {/* Important Notes and Legend Section */}
+    <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 mt-4">
+      <div className="flex items-start gap-3">
+        <Info className="w-5 h-5 mt-1 text-gray-600 flex-shrink-0" />
+        <div className="space-y-4 sm:space-y-6">
+          <div>
+            <h2 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Important Notes:</h2>
+            <ul className="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
+              <li>• Rewards reset monthly and are not stackable</li>
+              <li>• Diamond counts must be achieved within a single calendar month</li>
+              <li>• Each milestone must be verified by our team</li>
+              <li>• Payouts are processed at the end of that calendar month</li>
+            </ul>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 pt-2 border-t">
+            <div className="flex items-center gap-2">
+              <span className="w-4 h-4 rounded-full bg-yellow-400"></span>
+              <span className="text-sm sm:text-base">Reward Milestone</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-4 h-4 rounded-full bg-purple-600"></span>
+              <span className="text-sm sm:text-base">Progress Milestone</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Modal */}
+    {selectedMilestone !== null && (
+      <Modal
+        isOpen={selectedMilestone !== null}
+        onClose={() => setSelectedMilestone(null)}
+        milestone={allMilestones[selectedMilestone]}
+        users={getUsersAtMilestone(selectedMilestone)}
+      />
+    )}
+  </div>
+);
 }
