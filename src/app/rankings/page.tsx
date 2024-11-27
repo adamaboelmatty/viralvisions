@@ -447,6 +447,30 @@ export default function Rankings() {
   currentStreak: 0,
   validDays: 0
 }
+{
+  id: "7440258476385026049",
+  username: "sydney.rei",
+  avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/ad04cf76cb83d3a28a2cf4ddaf2d0dd3~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=54280&refresh_token=c0a7d4ead8422925a27b3a63ea59a608&x-expires=1732665600&x-signature=ZjuNBUFC1LQpgCbZ%2FnDzoJ8o9yw%3D&shp=a5d48078&shcp=81f88b70",
+  diamondCount: 9486,
+  currentStreak: 1,
+  validDays: 1
+},
+  {
+  id: "7440258052529373200",
+  username: "sillyrabittrixare4kids",
+  avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/df6bd41963164e71de76ace162817787~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=87466&refresh_token=00fb5bbdc95dab539b1107524ebdc07c&x-expires=1732665600&x-signature=v0%2FXXDsHmPOb94nABHwqCj%2B1srg%3D&shp=a5d48078&shcp=81f88b70",
+  diamondCount: 4969,
+  currentStreak: 0,
+  validDays: 0
+},
+  {
+  id: "7439900229362745360",
+  username: "jehadalsafer_",
+  avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/fcbd141d946eb0c3ffe61fdf354dc0b1~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=2752&refresh_token=a37bfa5cbf0e9f4fc9b1f2e418a73fb9&x-expires=1732665600&x-signature=9TqDCQTqVS3gz65b%2BTLXDQGlkmk%3D&shp=a5d48078&shcp=81f88b70",
+  diamondCount: 1021,
+  currentStreak: 4,
+  validDays: 4
+}
 ].sort((a, b) => b.diamondCount - a.diamondCount);
 
 const renderMilestoneSquare = (milestone: Milestone, index: number) => {
