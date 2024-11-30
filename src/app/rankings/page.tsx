@@ -321,14 +321,6 @@ export default function Rankings() {
     validDays: 2
   },
   {
-    id: "7399002293627454360",
-    username: "jehadshafer_",
-    avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/fcbd141d946eb0c3ffe61fdf354dc0b1~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=2752&refresh_token=a37bfa5cbf0e9f4fc9b1f2e418a73fb9&x-expires=1732665600&x-signature=9TqDCQTqVS3gz65b%2BTLXDQGlkmk%3D&shp=a5d48078&shcp=81f88b70",
-    diamondCount: 347,
-    currentStreak: 2,
-    validDays: 2
-  },
-  {
     id: "7433839668661059601",
     username: "mariahbarelaa",
     avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/c2f23a54273c6ab8b200fc7b28f40fbc~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=58876&refresh_token=5cd1cee36f9027417c003dea3cd4f66b&x-expires=1732665600&x-signature=zGZjBQB%2BHyCx%2FJsC6ETXxtOAR2s%3D&shp=a5d48078&shcp=81f88b70",
@@ -495,14 +487,6 @@ export default function Rankings() {
   diamondCount: 0,
   currentStreak: 0,
   validDays: 0
-},
-  {
-  id: "The creator has quit the network",
-  username: "sydney.rei",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
-  diamondCount: 12442,
-  currentStreak: 2,
-  validDays: 2
 },
   {
   id: "7439900229362745360",
