@@ -513,14 +513,6 @@ export default function Rankings() {
   validDays: 7
 },
   {
-  id: "7439937329738809361",
-  username: "babygjerv",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
-  diamondCount: 0,
-  currentStreak: 0,
-  validDays: 0
-},
-  {
   id: "7442005622943678465",
   username: "jessesbiggestfanmwah",
   avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
