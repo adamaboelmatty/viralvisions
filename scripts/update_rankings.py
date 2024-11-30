@@ -28,14 +28,12 @@ def read_csv(csv_file_path):
         for _, row in data.iterrows():
             try:
                 creator_id = str(row[creator_id_col]).strip()
-                # Only add each creator once
                 if creator_id not in updates:
                     updates[creator_id] = {
                         'diamondCount': int(row[diamonds_col]),
                         'validDays': int(row[valid_days_col]),
                         'username': str(row[username_col]).strip(),
-                        'currentStreak': int(row[valid_days_col]),  # Using Valid go LIVE days as streak
-                        'avatarUrl': "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg"
+                        'currentStreak': int(row[valid_days_col])  # Using Valid go LIVE days as streak
                     }
             except (ValueError, TypeError) as e:
                 print(f"Warning: Skipping row due to error with creator {row[username_col]}: {e}")
@@ -61,19 +59,23 @@ def update_users_array(component_file_path, updates):
     users_array = users_match.group(1)
     existing_ids = set()
     updated_users = []
+    existing_avatars = {}  # Store existing avatar URLs
 
-    # First, process existing users
+    # First, process existing users and store their avatar URLs
     for user_block in re.finditer(r'{\s*id: "[^"]+".*?}(?=\s*,\s*{|\s*\])', users_array, re.DOTALL):
         user_text = user_block.group(0)
         user_id_match = re.search(r'id: "([^"]+)"', user_text)
+        avatar_url_match = re.search(r'avatarUrl: "([^"]+)"', user_text)
         
-        if user_id_match:
+        if user_id_match and avatar_url_match:
             user_id = user_id_match.group(1)
+            existing_avatars[user_id] = avatar_url_match.group(1)
             existing_ids.add(user_id)
             
             if user_id in updates:
-                # Update existing user
+                # Update existing user but keep their current avatar URL
                 update_data = updates[user_id]
+                update_data['avatarUrl'] = existing_avatars[user_id]  # Preserve existing avatar URL
                 user_text = re.sub(
                     r'(diamondCount:) *\d+',
                     f'\\1 {update_data["diamondCount"]}',
@@ -99,10 +101,12 @@ def update_users_array(component_file_path, updates):
     # Then add new users
     for user_id, user_data in updates.items():
         if user_id not in existing_ids:
+            # For new users, we'll keep using their current avatar URL if we have it, otherwise use placeholder
+            avatar_url = existing_avatars.get(user_id, "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg")
             new_user = f'''{{
   id: "{user_id}",
   username: "{user_data['username']}",
-  avatarUrl: "{user_data['avatarUrl']}",
+  avatarUrl: "{avatar_url}",
   diamondCount: {user_data['diamondCount']},
   currentStreak: {user_data['currentStreak']},
   validDays: {user_data['validDays']}
