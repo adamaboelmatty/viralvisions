@@ -124,17 +124,17 @@ export default function Rankings() {
       id: "7430639971188523025",
       username: "blondielift",
       avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/f279f03c55f2e3283caedbde37748069~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=33958&refresh_token=e2d4869fd663a01cb92e0d627416b290&x-expires=1733104800&x-signature=mMd7SFd6n66Vz0aVwMl99Ut2iIs%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 424964,
-      currentStreak: 18,
-      validDays: 18
+      diamondCount: 500234,
+      currentStreak: 19,
+      validDays: 19
     },
   {
       id: "7431305555609829392",
       username: "biggergoofy",
       avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/826ed54ced4174ba2ce33a3d9c9e1ab4~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=30711&refresh_token=1fe5719ab4350912d626060ce3b33277&x-expires=1733104800&x-signature=PmOldsjaj9ehU4vi2LEUuuidHn0%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 331262,
-      currentStreak: 22,
-      validDays: 22
+      diamondCount: 351364,
+      currentStreak: 23,
+      validDays: 23
     },
   {
       id: "7434529706084663297",
@@ -148,9 +148,9 @@ export default function Rankings() {
       id: "7430599854776156176",
       username: "treasurerinaldi",
       avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/d138a0ac7d63fb18963ff01f7d5f5f28~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=69085&refresh_token=d16cdfbc018747866f1a71d8b44c1c77&x-expires=1733104800&x-signature=M6nzAkybaesxZzcjqfL1V8WJ8LA%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 292629,
-      currentStreak: 12,
-      validDays: 12
+      diamondCount: 302822,
+      currentStreak: 13,
+      validDays: 13
     },
   {
       id: "7428762234568081424",
@@ -172,7 +172,7 @@ export default function Rankings() {
       id: "7428778607167717393",
       username: "meggan_horn",
       avatarUrl: "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/921df000bb99f72264c08d607eae7102~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=63788&refresh_token=429c762a4adb853d7acf9fef859f81f2&x-expires=1733104800&x-signature=H%2BNNkr4VPsVZdl3eRPewseKl2ZU%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 105273,
+      diamondCount: 106296,
       currentStreak: 19,
       validDays: 19
     },
@@ -180,9 +180,9 @@ export default function Rankings() {
       id: "7433525532181921809",
       username: "graceschouvieller",
       avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/9788d959487ce02871bcea13a6492511~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=12314&refresh_token=c5dfbdfe88f62c2efe83352756191a16&x-expires=1733104800&x-signature=3KpiWuE3gwK6vUnlEPCf6ZI8Su4%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 85546,
-      currentStreak: 15,
-      validDays: 15
+      diamondCount: 97960,
+      currentStreak: 16,
+      validDays: 16
     },
   {
       id: "7429916855852122129",
@@ -196,15 +196,15 @@ export default function Rankings() {
       id: "7429909675828625409",
       username: "zboocka",
       avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/51aa50d9451289ee7e226cb7e380a6ea~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=39606&refresh_token=5d6e18eb099845dc0df9d4fdb9c8c363&x-expires=1733104800&x-signature=NZBpVrxGbk6CzMbb4dXxtxjSDig%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 46057,
-      currentStreak: 7,
-      validDays: 7
+      diamondCount: 46059,
+      currentStreak: 8,
+      validDays: 8
     },
   {
       id: "7428778451936542736",
       username: "theportersonntag",
       avatarUrl: "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/10094ef56d1c5c825d7c56a2808ece67~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=25349&refresh_token=5da6d652db7b7d3520d070c0b926f02f&x-expires=1733104800&x-signature=g56zrCuwCM1CjbUL0BhsdUTTzls%3D&shp=a5d48078&shcp=81f88b70",
-      diamondCount: 77774,
+      diamondCount: 77783,
       currentStreak: 9,
       validDays: 9
     },
@@ -268,17 +268,17 @@ export default function Rankings() {
     id: "7433515005670064129",
     username: "hevbev_3",
     avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/16cf2b05c0fb907c2d6e4382d9747dd7~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=23173&refresh_token=f9a082489b374c5eeb2a5c3da5c649cc&x-expires=1732665600&x-signature=UGdwK%2FHETpkZ55uKzb02ZQ%2BtdaM%3D&shp=a5d48078&shcp=81f88b70",
-    diamondCount: 4211,
-    currentStreak: 6,
-    validDays: 6
+    diamondCount: 5557,
+    currentStreak: 8,
+    validDays: 8
   },
   {
     id: "7440258052529373200",
     username: "sillyrabiitrixare4kids",
     avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/df6bd41963164e71de76ace162817787~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=87466&refresh_token=00fb5bbdc95dab539b1107524ebdc07c&x-expires=1732665600&x-signature=v0%2FXXDsHmPOb94nABHwqCj%2B1srg%3D&shp=a5d48078&shcp=81f88b70",
-    diamondCount: 8701,
-    currentStreak: 1,
-    validDays: 1
+    diamondCount: 14792,
+    currentStreak: 2,
+    validDays: 2
   },
   {
     id: "7438773724033122321",
@@ -436,9 +436,9 @@ export default function Rankings() {
   id: "7440258372751966225",
   username: "taylormayberry",
   avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/8ca13cd7e6e2b255e0256db37f50a093~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=42997&refresh_token=cc5e33330558e0740223f5ec08f1af2c&x-expires=1733104800&x-signature=dIoIDga%2FDo4ePpoirheowQ2hoOc%3D&shp=a5d48078&shcp=81f88b70",
-  diamondCount: 24520,
-  currentStreak: 6,
-  validDays: 6
+  diamondCount: 28223,
+  currentStreak: 7,
+  validDays: 7
 },
   {
   id: "7441742358129000464",
@@ -460,7 +460,7 @@ export default function Rankings() {
   id: "7436601847793582097",
   username: "ethanvnmber1",
   avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
-  diamondCount: 390,
+  diamondCount: 402,
   currentStreak: 0,
   validDays: 0
 },
@@ -484,7 +484,7 @@ export default function Rankings() {
   id: "7437098060410257425",
   username: "soothingscrubs",
   avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
-  diamondCount: 0,
+  diamondCount: 10,
   currentStreak: 0,
   validDays: 0
 },
@@ -492,9 +492,33 @@ export default function Rankings() {
   id: "7439900229362745360",
   username: "jehadalsafer_",
   avatarUrl: "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/fcbd141d946eb0c3ffe61fdf354dc0b1~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=69753&refresh_token=3c071aeffd68a7d068755ac111281df9&x-expires=1733104800&x-signature=sda8LSOeRmtnG6aX9MaIFuYDgNg%3D&shp=a5d48078&shcp=81f88b70",
-  diamondCount: 1854,
-  currentStreak: 7,
-  validDays: 7
+  diamondCount: 9976,
+  currentStreak: 9,
+  validDays: 9
+},
+  {
+  id: "The creator has quit the network",
+  username: "sydney.rei",
+  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  diamondCount: 12442,
+  currentStreak: 2,
+  validDays: 2
+},
+  {
+  id: "7432836201645768705",
+  username: "marc12345marc12345",
+  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  diamondCount: 10802,
+  currentStreak: 2,
+  validDays: 2
+},
+  {
+  id: "7439937329738809361",
+  username: "babygjerv",
+  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  diamondCount: 0,
+  currentStreak: 0,
+  validDays: 0
 },
   {
   id: "7442005622943678465",
