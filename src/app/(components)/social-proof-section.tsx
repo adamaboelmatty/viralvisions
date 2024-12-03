@@ -8,18 +8,6 @@ export function SocialProofSection() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const testimonials = [
-    {
-      name: "Scott Newkirk",
-      role: "Co-founder, ViralVisions",
-      avatar: "/scott-newkirk.png",
-      content: `"I transformed my TikTok live streaming hobby into a lucrative career. In my first month of livestreaming, I went from earning nothing to making <span class="text-purple-600 font-semibold">$6,000, with an average of $60 per hour</span>. This unexpected success became the foundation of ViralVisions."`,
-      description: `At ViralVisions, we're not just sharing a success story – we're offering you a blueprint for your own TikTok triumph. Our mission is to equip aspiring live streamers with the strategies, tools, and support needed to unlock their full potential on the platform. What's truly remarkable is that these results were achieved with less than 3,500 followers, proving that a large following isn't necessary to start earning. Imagine what you could achieve with our proven methods and dedicated guidance.`,
-      stats: [
-        { value: "$6,000+", label: "First Month" },
-        { value: "$60/hour", label: "Average Earnings" },
-        { value: "<3,500", label: "Followers" },
-      ],
-    },
         {
       name: "Savannah Hazlewood",
       role: "TikTok LIVE Creator",
@@ -30,6 +18,18 @@ export function SocialProofSection() {
         { value: "$8,000+", label: "First Month" },
         { value: "$75/hour", label: "Average Earnings" },
         { value: "33,000+", label: "Followers" },
+      ],
+    },
+    {
+      name: "Scott Newkirk",
+      role: "Co-founder, ViralVisions",
+      avatar: "/scott-newkirk.png",
+      content: `"I transformed my TikTok live streaming hobby into a lucrative career. In my first month of livestreaming, I went from earning nothing to making <span class="text-purple-600 font-semibold">$6,000, with an average of $60 per hour</span>. This unexpected success became the foundation of ViralVisions."`,
+      description: `At ViralVisions, we're not just sharing a success story – we're offering you a blueprint for your own TikTok triumph. Our mission is to equip aspiring live streamers with the strategies, tools, and support needed to unlock their full potential on the platform. What's truly remarkable is that these results were achieved with less than 3,500 followers, proving that a large following isn't necessary to start earning. Imagine what you could achieve with our proven methods and dedicated guidance.`,
+      stats: [
+        { value: "$6,000+", label: "First Month" },
+        { value: "$60/hour", label: "Average Earnings" },
+        { value: "<3,500", label: "Followers" },
       ],
     },
   ];
