@@ -198,7 +198,7 @@ export default function EligibilityCheck() {
 
                 {/* TikTok Information */}
                 <div>
-                  <Label htmlFor="tiktokUsername">TikTok Username*</Label>
+                  <Label htmlFor="tiktokUsername">Your TikTok Username*</Label>
                   <Input
                     name="tiktokUsername"
                     type="text"
