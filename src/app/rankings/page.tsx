@@ -120,7 +120,7 @@ export default function Rankings() {
   };
 
   const users = [
-    {
+  {
       id: "7430639971188523025",
       username: "blondielift",
       avatarUrl: "/deanna.jpeg", // Updated to link to the local image
@@ -529,9 +529,17 @@ export default function Rankings() {
   validDays: 0
 },
   {
+  id: "7442114465077690385",
+  username: "crossoliverr",
+  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  diamondCount: 0,
+  currentStreak: 0,
+  validDays: 0
+},
+  {
   id: "7442005622943678465",
   username: "jessesbiggestfanmwah",
-  avatarUrl: "/jessesbiggestfanmwah.jpeg",
+  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
   diamondCount: 0,
   currentStreak: 0,
   validDays: 0
