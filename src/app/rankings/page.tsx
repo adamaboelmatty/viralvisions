@@ -529,17 +529,9 @@ export default function Rankings() {
   validDays: 2
 },
   {
-  id: "7442114465077690385",
-  username: "crossoliverr",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
-  diamondCount: 0,
-  currentStreak: 0,
-  validDays: 0
-},
-  {
   id: "7444720446387273729",
   username: "sarah.e.k",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  avatarUrl: "/sarah.e.k.png",
   diamondCount: 14939,
   currentStreak: 1,
   validDays: 1
@@ -547,7 +539,7 @@ export default function Rankings() {
   {
   id: "7444790638912258049",
   username: "mayaaislinzenith",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  avatarUrl: "/mayaaislinzenith.jpeg",
   diamondCount: 7974,
   currentStreak: 2,
   validDays: 2
@@ -555,7 +547,7 @@ export default function Rankings() {
   {
   id: "7445082973390716944",
   username: "tyler.settelmyer",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  avatarUrl: "/tyler.settelmyer.jpeg",
   diamondCount: 7653,
   currentStreak: 1,
   validDays: 1
@@ -563,7 +555,7 @@ export default function Rankings() {
   {
   id: "7443978588136833041",
   username: "igorkiev2016",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  avatarUrl: "/igorkiev2016.jpeg",
   diamondCount: 85,
   currentStreak: 1,
   validDays: 1
@@ -571,7 +563,7 @@ export default function Rankings() {
   {
   id: "7444710935601725457",
   username: "theaddilynwilson",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  avatarUrl: "/theaddilynwilson.jpeg",
   diamondCount: 26,
   currentStreak: 1,
   validDays: 1
@@ -579,7 +571,7 @@ export default function Rankings() {
   {
   id: "7443830766225768449",
   username: "mark_headtrix",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  avatarUrl: "/mark_headtrix.jpeg",
   diamondCount: 18,
   currentStreak: 2,
   validDays: 2
@@ -587,7 +579,7 @@ export default function Rankings() {
   {
   id: "7444711009409056785",
   username: "aaroncolletti_",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  avatarUrl: "/aaroncolletti_.jpeg",
   diamondCount: 0,
   currentStreak: 0,
   validDays: 0
@@ -595,7 +587,7 @@ export default function Rankings() {
   {
   id: "7442005622943678465",
   username: "jessesbiggestfanmwah",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  avatarUrl: "/jessesbiggestfanmwah.jpeg",
   diamondCount: 0,
   currentStreak: 0,
   validDays: 0
