@@ -157,3 +157,51 @@
 .animate-pulse {
   animation: pulse 2s infinite;
 }
+.required-field::after {
+  content: "*";
+  color: #ef4444;
+  margin-left: 4px;
+}
+@layer components {
+  /* Form section wrapper */
+  .form-section-wrapper {
+    @apply p-0 m-0;
+  }
+
+  /* Card overrides */
+  .form-card {
+    @apply !p-0 bg-white shadow-md;
+  }
+
+  .form-card-content {
+    @apply !p-6 sm:!p-8;
+  }
+
+  /* Section specific styles */
+  .referral-section {
+    @apply bg-purple-50 rounded-xl p-6 sm:p-8 mt-0;
+  }
+
+  .referral-section-header {
+    @apply mb-6;
+  }
+
+  .referral-input-wrapper {
+    @apply bg-white rounded-lg p-4 mb-4;
+  }
+
+  /* Form group spacing */
+  .form-group {
+    @apply space-y-4 first:mt-0;
+  }
+
+  /* Input field wrapper */
+  .input-wrapper {
+    @apply mb-4 last:mb-0;
+  }
+
+  /* Section title */
+  .section-title {
+    @apply text-xl font-semibold text-gray-900 mb-6 mt-0;
+  }
+}
