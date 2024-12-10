@@ -50,11 +50,9 @@ export default function CreatorApplication() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (currentStep !== FORM_SECTIONS.length - 1) {
-      handleNext();
-      return;
-    }
+  };
 
+  const handleFinalSubmit = async () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
     
@@ -381,61 +379,66 @@ export default function CreatorApplication() {
                   </div>
                 )}
 
- {/* Navigation Buttons */}
-<div className="flex justify-between mt-6">
-  {currentStep > 0 && (
-    <Button
-      type="button"
-      onClick={handlePrevious}
-      className="bg-gray-100 text-gray-700 hover:bg-gray-200"
-    >
-      Back
-    </Button>
-  )}
-  
-  <Button
-    type={currentStep === FORM_SECTIONS.length - 1 ? "submit" : "button"}
-    onClick={currentStep === FORM_SECTIONS.length - 1 ? undefined : handleNext}
-    className={`${
-      currentStep === 0 ? 'w-full' : 'ml-auto'
-    } bg-purple-600 text-white hover:bg-purple-700`}
-    disabled={isSubmitting}
-  >
-    {currentStep === FORM_SECTIONS.length - 1 
-      ? (isSubmitting ? "Submitting..." : "Submit Application")
-      : "Next"
-    }
-  </Button>
-</div>
+                {/* Modified Navigation Buttons */}
+                <div className="flex justify-between mt-6">
+                  {currentStep > 0 && (
+                    <Button
+                      type="button"
+                      onClick={handlePrevious}
+                      className="bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    >
+                      Back
+                    </Button>
+                  )}
+                  
+                  {currentStep === FORM_SECTIONS.length - 1 ? (
+                    <Button
+                      type="button"
+                      onClick={handleFinalSubmit}
+                      className={`${currentStep === 0 ? 'w-full' : 'ml-auto'} bg-purple-600 text-white hover:bg-purple-700`}
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Submitting..." : "Submit Application"}
+                    </Button>
+                  ) : (
+                    <Button
+                      type="button"
+                      onClick={handleNext}
+                      className={`${currentStep === 0 ? 'w-full' : 'ml-auto'} bg-purple-600 text-white hover:bg-purple-700`}
+                    >
+                      Next
+                    </Button>
+                  )}
+                </div>
 
-{/* Status Messages - Only show after submission attempt */}
-{submitStatus !== 'idle' && (
-  <>
-    {isSubmitting && (
-      <div className="mt-4 flex justify-center">
-        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-purple-600"></div>
-      </div>
-    )}
+                {/* Status Messages */}
+                {submitStatus !== 'idle' && (
+                  <>
+                    {isSubmitting && (
+                      <div className="mt-4 flex justify-center">
+                        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-purple-600"></div>
+                      </div>
+                    )}
 
-    {!isSubmitting && submitStatus === 'success' && (
-      <div className="mt-4 bg-green-50 border border-green-200 text-green-700 p-4 rounded-lg flex items-center">
-        <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-        </svg>
-        Application submitted successfully! We'll be in touch soon.
-      </div>
-    )}
+                    {!isSubmitting && submitStatus === 'success' && (
+                      <div className="mt-4 bg-green-50 border border-green-200 text-green-700 p-4 rounded-lg flex items-center">
+                        <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        Application submitted successfully! We'll be in touch soon.
+                      </div>
+                    )}
 
-    {!isSubmitting && submitStatus === 'error' && (
-      <div className="mt-4 bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg flex items-center">
-        <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-        Failed to submit application. Please try again or contact support.
-      </div>
-    )}
-  </>
-)}
+                    {!isSubmitting && submitStatus === 'error' && (
+                      <div className="mt-4 bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg flex items-center">
+                        <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        Failed to submit application. Please try again or contact support.
+                      </div>
+                    )}
+                  </>
+                )}
               </form>
             </CardContent>
           </Card>
