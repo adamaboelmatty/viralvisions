@@ -15,7 +15,7 @@ interface HomeProps {
 
 export default function Home({ setCurrentPage }: HomeProps) {
   return (
-    <div className="space-y-16 py-16">
+    <div className="space-y-0 py-16">
       <HeroSection setCurrentPage={setCurrentPage} />
       <LogoBannerSection />
       <SocialProofSection />

@@ -11,7 +11,7 @@ export function LogoBannerSection() {  // Make sure to export the component
   ];
 
   return (
-    <div className="w-full bg-white pt-1 pb-8 overflow-hidden"> {/* Reduced pt from py-8 to pt-2 */}
+    <div className="w-full bg-white pt-10 pb-10 overflow-hidden"> {/* Reduced pt from py-8 to pt-2 */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Enhanced Title Section */}
         <div className="relative mb-12">
