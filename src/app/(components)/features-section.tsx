@@ -272,7 +272,7 @@ export function FeaturesSection() {
           variant="outline"
           size="lg"
           className="hover:bg-purple-50 transform transition-all duration-300 hover:scale-105"
-          onClick={() => window.location.href = 'https://viralvisions.com/testimonials'}
+          onClick={() => window.location.href = 'https://viralvisions.live/testimonials'}
         >
           View Success Stories
         </Button>
