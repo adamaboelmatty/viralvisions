@@ -205,3 +205,20 @@
     @apply text-xl font-semibold text-gray-900 mb-6 mt-0;
   }
 }
+.animated-gradient {
+  background: linear-gradient(270deg, #6b46c1, #9f7aea, #4c51bf); /* Added Light Lavender */
+  background-size: 200% 200%;
+  animation: subtle-gradient-animation 10s ease-in-out infinite;
+}
+
+@keyframes subtle-gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
