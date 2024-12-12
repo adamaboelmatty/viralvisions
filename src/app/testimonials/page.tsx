@@ -10,7 +10,7 @@ const TestimonialsPage = () => {
         script.type = "text/javascript";
         script.onload = () => {
             // Initialize iframeResizer after script loads
-            window.iFrameResize?.(
+            (window as any).iFrameResize?.(
                 { log: false, checkOrigin: false },
                 "#testimonialto-viralvisions-tag-all-light"
             );
