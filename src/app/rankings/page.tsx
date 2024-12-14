@@ -449,14 +449,6 @@ export default function Rankings() {
   validDays: 0
 },
   {
-  id: "7436601847793582097",
-  username: "ethanvnmber1",
-  avatarUrl: "/ethanvnmber1.jpeg",
-  diamondCount: 16455,
-  currentStreak: 0,
-  validDays: 0
-},
-  {
   id: "7437289492555382800",
   username: "savybrooks",
   avatarUrl: "/savybrooks.jpeg",
