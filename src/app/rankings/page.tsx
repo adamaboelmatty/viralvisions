@@ -587,18 +587,10 @@ export default function Rankings() {
   {
   id: "7446804875616485392",
   username: "sports.center.06",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  avatarUrl: "/sports.center.06.jpeg",
   diamondCount: 112997,
   currentStreak: 3,
   validDays: 3
-},
-  {
-  id: "The creator has quit the network",
-  username: "ethanvnmber1",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
-  diamondCount: 16493,
-  currentStreak: 0,
-  validDays: 0
 },
   {
   id: "7442005622943678465",
@@ -607,14 +599,6 @@ export default function Rankings() {
   diamondCount: 129,
   currentStreak: 1,
   validDays: 1
-},
-  {
-  id: "7442114465077690385",
-  username: "crossoliverr",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
-  diamondCount: 0,
-  currentStreak: 0,
-  validDays: 0
 },
   {
   id: "7447308784210509840",
