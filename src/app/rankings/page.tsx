@@ -595,7 +595,7 @@ export default function Rankings() {
   {
   id: "7442005622943678465",
   username: "jessesbiggestfanmwah",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  avatarUrl: "/jessesbiggestfanmwah.jpeg",
   diamondCount: 129,
   currentStreak: 1,
   validDays: 1
