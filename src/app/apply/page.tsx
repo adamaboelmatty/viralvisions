@@ -53,6 +53,39 @@ export default function CreatorApplication() {
   };
 
   const handleFinalSubmit = async () => {
+    // Validate all required fields before submission
+    const requiredFields = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      birthday: formData.birthday,
+      timezone: formData.timezone,
+      tiktokUsername: formData.tiktokUsername,
+      invitationCode: formData.invitationCode,
+      followers: formData.followers,
+      monthlyTarget: formData.monthlyTarget,
+      hoursPerWeek: formData.hoursPerWeek,
+      contentType: formData.contentType,
+      thirtyDayCommitment: formData.thirtyDayCommitment
+    };
+
+    // Check if any required field is empty
+    const missingFields = Object.entries(requiredFields)
+      .filter(([key, value]) => {
+        if (Array.isArray(value)) {
+          return value.length === 0;
+        }
+        return !value;
+      })
+      .map(([key]) => key);
+
+    if (missingFields.length > 0) {
+      setSubmitStatus('error');
+      console.error('Missing required fields:', missingFields);
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus('idle');
     
@@ -181,6 +214,7 @@ export default function CreatorApplication() {
                         value={formData.timezone}
                         onValueChange={(value) => setFormData({...formData, timezone: value})}
                         className="flex flex-col space-y-1"
+                        required
                       >
                         {['PT', 'MT', 'CT', 'ET'].map((zone) => (
                           <div key={zone} className="flex items-center space-x-2">
@@ -194,49 +228,57 @@ export default function CreatorApplication() {
                 )}
 
                 {/* Step 2: Creator Network */}
-{currentStep === 1 && (
-<div className="space-y-6">
-<h3 className="text-xl font-semibold text-gray-900 mb-6"></h3>
-      <p className="text-purple-700 mt-4 text-lg">
-        <span className="font-bold">Did you know?</span> Creators who join with friends are 3x more likely to become successful livestreamers!
-      </p>
-    <div className="space-y-6">
-      <div>
-        <Label className="mb-3 block">Who recruited you to ViralVisions?</Label>
-        <Input
-          name="referralSource"
-          type="text"
-          placeholder="Enter their name or TikTok username"
-          className="bg-white rounded-lg border-gray-200"
-        />
-      </div>
+                {currentStep === 1 && (
+                  <div className="space-y-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-6"></h3>
+                    <p className="text-purple-700 mt-4 text-lg">
+                      <span className="font-bold">Did you know?</span> Creators who join with friends are 3x more likely to become successful livestreamers!
+                    </p>
+                    <div className="space-y-6">
+                      <div>
+                        <Label className="mb-3 block">Who recruited you to ViralVisions?</Label>
+                        <Input
+                          name="referralSource"
+                          type="text"
+                          placeholder="Enter their name or TikTok username"
+                          className="bg-white rounded-lg border-gray-200"
+                          value={formData.referralSource}
+                          onChange={(e) => setFormData({...formData, referralSource: e.target.value})}
+                        />
+                      </div>
 
-      <div className="pt-4"> {/* Added top padding */}
-        <Label className="mb-3 block">Know someone perfect for livestreaming?</Label>
-        <div className="space-y-4">
-          <Input
-            name="referralName"
-            type="text"
-            placeholder="Their Name"
-            className="bg-white rounded-lg border-gray-200"
-          />
-          <Input
-            name="referralSocial"
-            type="text"
-            placeholder="Their Social Media Handle"
-            className="bg-white rounded-lg border-gray-200"
-          />
-          <Input
-            name="referralReason"
-            type="text"
-            placeholder="Their unique talents, personality, etc."
-            className="bg-white rounded-lg border-gray-200"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-)}
+                      <div className="pt-4">
+                        <Label className="mb-3 block">Know someone perfect for livestreaming?</Label>
+                        <div className="space-y-4">
+                          <Input
+                            name="referralName"
+                            type="text"
+                            placeholder="Their Name"
+                            className="bg-white rounded-lg border-gray-200"
+                            value={formData.referralName}
+                            onChange={(e) => setFormData({...formData, referralName: e.target.value})}
+                          />
+                          <Input
+                            name="referralSocial"
+                            type="text"
+                            placeholder="Their Social Media Handle"
+                            className="bg-white rounded-lg border-gray-200"
+                            value={formData.referralSocial}
+                            onChange={(e) => setFormData({...formData, referralSocial: e.target.value})}
+                          />
+                          <Input
+                            name="referralReason"
+                            type="text"
+                            placeholder="Their unique talents, personality, etc."
+                            className="bg-white rounded-lg border-gray-200"
+                            value={formData.referralReason}
+                            onChange={(e) => setFormData({...formData, referralReason: e.target.value})}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 {/* Step 3: TikTok Details */}
                 {currentStep === 2 && (
@@ -281,6 +323,7 @@ export default function CreatorApplication() {
                         value={formData.followers}
                         onValueChange={(value) => setFormData({...formData, followers: value})}
                         className="flex flex-col space-y-1"
+                        required
                       >
                         {['<500', '500-1000', '1000-5000', '5000-10000', '10000+'].map((range) => (
                           <div key={range} className="flex items-center space-x-2">
@@ -304,6 +347,7 @@ export default function CreatorApplication() {
                         value={formData.monthlyTarget}
                         onValueChange={(value) => setFormData({...formData, monthlyTarget: value})}
                         className="flex flex-col space-y-1"
+                        required
                       >
                         {['$0-500', '$501-2000', '$2001-5000', '$5000+'].map((range) => (
                           <div key={range} className="flex items-center space-x-2">
@@ -321,6 +365,7 @@ export default function CreatorApplication() {
                         value={formData.hoursPerWeek}
                         onValueChange={(value) => setFormData({...formData, hoursPerWeek: value})}
                         className="flex flex-col space-y-1"
+                        required
                       >
                         {['1-3', '4-7', '8-10', '10-15'].map((range) => (
                           <div key={range} className="flex items-center space-x-2">
@@ -332,7 +377,7 @@ export default function CreatorApplication() {
                     </div>
 
                     <div>
-                      <Label>What type of content do you primarily create on TikTok?*</Label>
+                    <Label>What type of content do you primarily create on TikTok?*</Label>
                       <div className="space-y-2 mt-2">
                         {['Education', 'Entertainment', 'Fitness', 'Lifestyle', 'Beauty/Fashion', 'Other'].map((type) => (
                           <div key={type} className="flex items-center space-x-2">
@@ -348,6 +393,7 @@ export default function CreatorApplication() {
                                 setFormData({...formData, contentType: updatedTypes});
                               }}
                               className="rounded border-gray-300"
+                              required={formData.contentType.length === 0}
                             />
                             <Label>{type}</Label>
                           </div>
@@ -365,6 +411,7 @@ export default function CreatorApplication() {
                         value={formData.thirtyDayCommitment}
                         onValueChange={(value) => setFormData({...formData, thirtyDayCommitment: value})}
                         className="space-y-2"
+                        required
                       >
                         <div className="flex items-center space-x-2">
                           <RadioGroupItem value="yes" />
@@ -379,7 +426,7 @@ export default function CreatorApplication() {
                   </div>
                 )}
 
-                {/* Modified Navigation Buttons */}
+                {/* Navigation Buttons */}
                 <div className="flex justify-between mt-6">
                   {currentStep > 0 && (
                     <Button
@@ -434,7 +481,7 @@ export default function CreatorApplication() {
                         <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
-                        Failed to submit application. Please try again or contact support.
+                        Failed to submit application. Please ensure all required fields are filled out and try again.
                       </div>
                     )}
                   </>
