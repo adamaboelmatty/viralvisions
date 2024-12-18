@@ -593,29 +593,13 @@ export default function Rankings() {
   validDays: 1
 },
   {
-  id: "The creator has quit the network",
-  username: "ethanvnmber1",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
-  diamondCount: 16493,
-  currentStreak: 0,
-  validDays: 0
-},
-  {
   id: "7447308784210509840",
   username: "peppers513",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
+  avatarUrl: "/pepper513.jpeg",
   diamondCount: 8026,
   currentStreak: 1,
   validDays: 1
 },
-  {
-  id: "7442114465077690385",
-  username: "crossoliverr",
-  avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
-  diamondCount: 0,
-  currentStreak: 0,
-  validDays: 0
-}
 ].sort((a, b) => b.diamondCount - a.diamondCount);
 
 const renderMilestoneSquare = (milestone: Milestone, index: number) => {
