@@ -1,6 +1,10 @@
-// src/app/tiktok-diamonds-calculator/page.tsx
-import { Metadata } from 'next';
-import DiamondCalculator from './components/DiamondCalculator';
+import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
+
+const DiamondCalculatorComponent = dynamic(
+  () => import('./components/DiamondCalculatorComponent'),
+  { ssr: true }
+);
 
 export const metadata: Metadata = {
   title: 'TikTok Diamonds Calculator | Calculate LIVE Stream Earnings | ViralVisions',
@@ -11,9 +15,10 @@ export const metadata: Metadata = {
     description: 'Calculate your potential TikTok LIVE earnings and learn how to maximize your diamond revenue.',
     type: 'website',
     url: 'https://viralvisions.live/tiktok-diamonds-calculator',
+    siteName: 'ViralVisions',
   },
 };
 
 export default function Page() {
-  return <DiamondCalculator />;
+  return <DiamondCalculatorComponent />;
 }
