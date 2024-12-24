@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "postbuild": "next-sitemap",
+    "start": "next start", 
     "lint": "next lint"
   },
   "dependencies": {
@@ -48,4 +49,4 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
-}
+ }

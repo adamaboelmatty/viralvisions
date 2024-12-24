@@ -1,4 +1,3 @@
-// src/app/tiktok-diamonds-calculator/components/DiamondCalculatorComponent.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -7,10 +6,10 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Calculator, Diamond, Coins, Clock, DollarSign, Users, Gift } from 'lucide-react';
 
-export default function DiamondCalculator() {
-  const [diamonds, setDiamonds] = useState('');
-  const [earnings, setEarnings] = useState(0);
-  const [level, setLevel] = useState('');
+const DiamondCalculatorComponent: React.FC = () => {
+  const [diamonds, setDiamonds] = useState<string>('');
+  const [earnings, setEarnings] = useState<number>(0);
+  const [level, setLevel] = useState<string>('');
 
   const calculateEarnings = () => {
     const diamondCount = parseInt(diamonds) || 0;
@@ -239,4 +238,6 @@ export default function DiamondCalculator() {
       </div>
     </div>
   );
-}
+};
+
+export default DiamondCalculatorComponent;
