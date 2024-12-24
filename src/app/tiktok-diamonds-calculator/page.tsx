@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import Script from 'next/script';
 
 const DiamondCalculatorComponent = dynamic(
   () => import('./components/DiamondCalculatorComponent'),
@@ -7,18 +8,51 @@ const DiamondCalculatorComponent = dynamic(
 );
 
 export const metadata: Metadata = {
-  title: 'TikTok Diamonds Calculator | Calculate LIVE Stream Earnings | ViralVisions',
-  description: 'Use our free TikTok Diamonds Calculator to estimate your potential earnings from LIVE streams. Get accurate conversion rates and expert tips to maximize your TikTok earnings.',
-  keywords: 'TikTok diamonds calculator, TikTok live earnings, TikTok coins conversion, diamonds to USD, TikTok creator earnings, ViralVisions',
+  title: 'TikTok Diamonds Calculator | Free LIVE Stream Earnings Calculator',
+  description: 'Calculate your TikTok LIVE diamonds to USD instantly. Get exact diamond rates, conversion calculators, and expert tips to maximize your earnings. Updated for 2024.',
+  keywords: 'TikTok diamonds calculator, TikTok LIVE earnings, diamonds to USD, TikTok creator earnings, diamond rate calculator',
   openGraph: {
-    title: 'TikTok Diamonds Calculator | ViralVisions',
-    description: 'Calculate your potential TikTok LIVE earnings and learn how to maximize your diamond revenue.',
+    title: 'TikTok Diamonds Calculator | Free LIVE Stream Earnings Calculator',
+    description: 'Calculate your TikTok LIVE diamonds to USD instantly. Get exact diamond rates and maximize your earnings.',
     type: 'website',
     url: 'https://viralvisions.live/tiktok-diamonds-calculator',
     siteName: 'ViralVisions',
   },
 };
 
+// JSON-LD Schema
+const calculatorSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'TikTok Diamonds Calculator',
+  applicationCategory: 'Calculator',
+  description: 'Free calculator to convert TikTok diamonds to USD and estimate LIVE stream earnings',
+  operatingSystem: 'Web-based',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  author: {
+    '@type': 'Organization',
+    name: 'ViralVisions',
+    url: 'https://viralvisions.live',
+  },
+  dateModified: '2024-12-23', // Update this regularly
+  browserRequirements: 'Requires JavaScript. Works on all modern browsers.',
+  url: 'https://viralvisions.live/tiktok-diamonds-calculator',
+  image: 'public/logo.png', // Add your actual logo URL
+};
+
 export default function Page() {
-  return <DiamondCalculatorComponent />;
+  return (
+    <>
+      <Script
+        id="calculator-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(calculatorSchema) }}
+      />
+      <DiamondCalculatorComponent />
+    </>
+  );
 }
