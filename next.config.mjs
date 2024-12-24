@@ -1,10 +1,36 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Your Next.js configuration options go here
+  // Preserve existing image configuration
   images: {
     domains: ['api.placeholder.com'],
   },
-  // Add any other config options you need
+  // Add redirect configuration
+  async redirects() {
+    return [
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: 'www.viralvisions.live',
+          },
+        ],
+        destination: 'https://viralvisions.live',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.viralvisions.live',
+          },
+        ],
+        destination: 'https://viralvisions.live/:path*',
+        permanent: true,
+      },
+    ];
+  },
 }
 
 export default nextConfig
