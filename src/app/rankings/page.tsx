@@ -4,6 +4,7 @@ import React from "react";
 import { Trophy, Info } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Modal } from './modal';
+import Image from "next/image";
 
 // Types
 interface User {
@@ -33,13 +34,16 @@ const AvatarWithTooltip: React.FC<AvatarProps> = ({ user, getStreakBadge, isMobi
   <div className="relative group">
     <div className="relative">
       <div className={`
-        rounded-full overflow-hidden bg-gray-200 flex items-center justify-center border-2 border-white
+        rounded-full overflow-hidden bg-gray-200 flex items-center justify-center border-2 border-white relative
         ${isMobile ? 'h-16 w-16' : 'h-12 w-12'} // Larger size only on mobile
       `}>
-        <img 
+        <Image 
           src={user.avatarUrl} 
           alt={user.username}
-          className="w-full h-full object-cover"
+          fill
+          sizes={isMobile ? "64px" : "48px"}
+          className="object-cover"
+          priority={false}
         />
       </div>
       {getStreakBadge(user.validDays) && (

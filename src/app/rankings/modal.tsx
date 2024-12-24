@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import Image from "next/image";
 
 interface User {
   id: string;
@@ -80,11 +81,14 @@ export function Modal({ isOpen, onClose, milestone, users }: ModalProps) {
                 >
                   {/* Avatar */}
                   <div className="relative flex-shrink-0">
-                    <div className="w-14 h-14 rounded-full overflow-hidden">
-                      <img 
+                    <div className="w-14 h-14 rounded-full overflow-hidden relative">
+                      <Image 
                         src={user.avatarUrl} 
                         alt={user.username}
-                        className="w-full h-full object-cover"
+                        fill
+                        sizes="56px"
+                        className="object-cover"
+                        priority={false}
                       />
                     </div>
                     {user.validDays >= 3 && (

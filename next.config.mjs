@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Preserve existing image configuration
   images: {
-    domains: ['api.placeholder.com'],
+    domains: [
+      'api.placeholder.com',
+      'p16-sign-useast7.tiktokcdn-us.com', 
+      'p16-sign.tiktokcdn-us.com',
+      'p19-sign.tiktokcdn-us.com',
+    ],
   },
   // Add redirect configuration
   async redirects() {
