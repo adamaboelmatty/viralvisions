@@ -136,9 +136,9 @@ export default function Rankings() {
       id: "7431305555609829392",
       username: "biggergoofy",
       avatarUrl: "/max.jpeg",
-      diamondCount: 115641,
-      currentStreak: 8,
-      validDays: 8
+      diamondCount: 149736,
+      currentStreak: 10,
+      validDays: 10
     },
   {
       id: "7434529706084663297",
@@ -152,15 +152,15 @@ export default function Rankings() {
       id: "7430599854776156176",
       username: "treasurerinaldi",
       avatarUrl: "/treasure.jpeg",
-      diamondCount: 54488,
-      currentStreak: 8,
-      validDays: 8
+      diamondCount: 64811,
+      currentStreak: 9,
+      validDays: 9
     },
   {
       id: "7428762234568081424",
       username: "_juliannaortiz",
       avatarUrl: "/julianna.jpeg",
-      diamondCount: 269184,
+      diamondCount: 269673,
       currentStreak: 11,
       validDays: 11
     },
@@ -176,7 +176,7 @@ export default function Rankings() {
       id: "7428778607167717393",
       username: "meggan_horn",
       avatarUrl: "/meggan_horn.jpeg",
-      diamondCount: 83438,
+      diamondCount: 83443,
       currentStreak: 14,
       validDays: 14
     },
@@ -184,7 +184,7 @@ export default function Rankings() {
       id: "7433525532181921809",
       username: "graceschouvieller",
       avatarUrl: "/graceschouvieller.jpeg",
-      diamondCount: 247170,
+      diamondCount: 248082,
       currentStreak: 11,
       validDays: 11
     },
@@ -208,7 +208,7 @@ export default function Rankings() {
       id: "7428778451936542736",
       username: "theportersonntag",
       avatarUrl: "/theportersonntag.jpeg",
-      diamondCount: 48141,
+      diamondCount: 48143,
       currentStreak: 6,
       validDays: 6
     },
@@ -240,9 +240,9 @@ export default function Rankings() {
       id: "7434692820197457937",
       username: "josiebae9",
       avatarUrl: "/josiebae9.jpeg",
-      diamondCount: 35769,
-      currentStreak: 1,
-      validDays: 1
+      diamondCount: 44957,
+      currentStreak: 2,
+      validDays: 2
     },
   {
       id: "7433967653015797776",
@@ -256,9 +256,9 @@ export default function Rankings() {
       id: "7438773484378947585",
       username: "swagmaster1738",
       avatarUrl: "/swagmaster1738.jpeg",
-      diamondCount: 5207,
-      currentStreak: 4,
-      validDays: 4
+      diamondCount: 5449,
+      currentStreak: 5,
+      validDays: 5
   },
   {
     id: "7435452847371698192",
@@ -280,9 +280,9 @@ export default function Rankings() {
     id: "7440258052529373200",
     username: "sillyrabiitrixare4kids",
     avatarUrl: "/lillian.jpeg",
-    diamondCount: 382637,
-    currentStreak: 8,
-    validDays: 8
+    diamondCount: 382661,
+    currentStreak: 9,
+    validDays: 9
   },
   {
     id: "7438773724033122321",
@@ -312,7 +312,7 @@ export default function Rankings() {
     id: "7428922710903865345",
     username: "kendraamckee",
     avatarUrl: "/kendraamckee.jpeg",
-    diamondCount: 134,
+    diamondCount: 142,
     currentStreak: 0,
     validDays: 0
   },
@@ -432,15 +432,15 @@ export default function Rankings() {
   id: "7440258372751966225",
   username: "taylormayberry",
   avatarUrl: "/taylormayberry.jpeg",
-  diamondCount: 224005,
-  currentStreak: 17,
-  validDays: 17
+  diamondCount: 232171,
+  currentStreak: 20,
+  validDays: 20
 },
   {
   id: "7441742358129000464",
   username: "hannah.grace0928",
   avatarUrl: "/hannah.grace0928 .jpeg",
-  diamondCount: 18844,
+  diamondCount: 18846,
   currentStreak: 22,
   validDays: 22
 },
@@ -448,9 +448,9 @@ export default function Rankings() {
   id: "7442114490004455425",
   username: ".whoslain3y",
   avatarUrl: "/whoslain3y.jpeg",
-  diamondCount: 1262,
-  currentStreak: 1,
-  validDays: 1
+  diamondCount: 1362,
+  currentStreak: 2,
+  validDays: 2
 },
   {
   id: "7437289492555382800",
@@ -472,17 +472,17 @@ export default function Rankings() {
   id: "7439900229362745360",
   username: "jehadalsafer_",
   avatarUrl: "/jehadalsafer_.jpeg",
-  diamondCount: 77820,
-  currentStreak: 15,
-  validDays: 15
+  diamondCount: 91302,
+  currentStreak: 17,
+  validDays: 17
 },
   {
   id: "7432836201645768705",
   username: "marc12345marc12345",
   avatarUrl: "/marc.jpeg",
-  diamondCount: 175316,
-  currentStreak: 19,
-  validDays: 19
+  diamondCount: 252252,
+  currentStreak: 21,
+  validDays: 21
 },
   {
   id: "7439937329738809361",
@@ -504,9 +504,9 @@ export default function Rankings() {
   id: "7444058578182258689",
   username: "girlypopalex.777",
   avatarUrl: "/girlypopalex.777.jpeg",
-  diamondCount: 1173,
-  currentStreak: 9,
-  validDays: 9
+  diamondCount: 1981,
+  currentStreak: 10,
+  validDays: 10
 },
   {
   id: "7443942389472837648",
@@ -552,9 +552,9 @@ export default function Rankings() {
   id: "7443978588136833041",
   username: "igorkiev2016",
   avatarUrl: "/igorkiev2016.jpeg",
-  diamondCount: 311,
-  currentStreak: 5,
-  validDays: 5
+  diamondCount: 325,
+  currentStreak: 6,
+  validDays: 6
 },
   {
   id: "7444710935601725457",
@@ -608,17 +608,17 @@ export default function Rankings() {
   id: "7447308784210509840",
   username: "peppers513",
   avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
-  diamondCount: 13097,
-  currentStreak: 3,
-  validDays: 3
+  diamondCount: 15989,
+  currentStreak: 5,
+  validDays: 5
 },
   {
   id: "7450277351478509569",
   username: "justjh0",
   avatarUrl: "https://p16-sign-useast7.tiktokcdn-us.com/tos-useast5-avt-0068-tx/PLACEHOLDER.jpeg",
-  diamondCount: 5235,
-  currentStreak: 4,
-  validDays: 4
+  diamondCount: 6167,
+  currentStreak: 5,
+  validDays: 5
 }
 ].sort((a, b) => b.diamondCount - a.diamondCount);
 
